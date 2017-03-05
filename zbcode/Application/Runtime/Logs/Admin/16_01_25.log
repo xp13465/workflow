@@ -1,0 +1,1014 @@
+[ 2016-01-25T08:40:09+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-25T08:40:09+08:00 ] 127.0.0.1 /Admin/common/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-25T08:40:18+08:00 ] 127.0.0.1 /Admin/common/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `zb_user` WHERE ( email = 'zb@zb.com' and password = 'e10adc3949ba59abbe56e057f20f883e' and status = 1 ) LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `zb_user` WHERE `email` = 'zb@zb.com' LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-25T08:40:18+08:00 ] 127.0.0.1 /Admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-25T08:40:20+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1453682420138&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0090s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0070s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') ORDER BY n.sort asc, n.id desc  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+
+[ 2016-01-25T08:40:22+08:00 ] 127.0.0.1 /Admin/index/xitongcanshu-icon-win
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:xitongcanshu-icon-win
+
+[ 2016-01-25T08:40:23+08:00 ] 127.0.0.1 /Admin/system/getpermissionList?_dc=1453682423105
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_auth_permission` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_permission` WHERE (  status <> 3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `permission_id`,`permission_code`,`permission_name`,`status`,`update_time` FROM `zb_auth_permission` WHERE (  status <> 3 ) ORDER BY permission_id desc LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T08:40:26+08:00 ] 127.0.0.1 /Admin/system/getRoleList?_dc=1453682426003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status <> 3 ) LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status <> 3 ) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T08:40:26+08:00 ] 127.0.0.1 /Admin/system/getpositionList?_dc=1453682426678
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_department` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_position` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_position` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_position as p left JOIN zb_organization as o ON p.organization_id = o.organization_id  WHERE (  p.status <> 3 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `zb_position` [ RunTime:0.0100s ]
+SQL: SELECT p.*,d.pid as department_pid,d.name as department_name,o.organization_name,( SELECT dp.name FROM zb_department as dp WHERE ( d.pid = dp.id )  ) as firstdepartment_name FROM zb_position as p left JOIN zb_organization as o ON p.organization_id = o.organization_id left JOIN zb_department as d ON p.department_id = d.id  WHERE (  p.status <> 3 ) ORDER BY p.id desc LIMIT 0,25   [ RunTime:0.0300s ]
+
+[ 2016-01-25T08:40:27+08:00 ] 127.0.0.1 /Admin/user/getUserList?_dc=1453682427426
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: where D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\UserController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_user as user left JOIN zb_department ON user.department_id = zb_department.id left JOIN zb_position ON user.position_id = zb_position.id  LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: where D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\UserController.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0060s ]
+SQL: SELECT user.*,d.name as subdepartmentname,d.pid as department_pid,p.pid as leader_position_id,p.name as position_name,og.organization_name,pp.name as leader_position_name,dp.name as firstdepartmentname FROM zb_user as user left JOIN zb_department as d ON user.department_id = d.id left JOIN zb_position as p ON user.position_id = p.id left JOIN zb_organization as og ON og.organization_id = user.organization_id left JOIN zb_department as dp ON d.pid = dp.id left JOIN zb_position as pp ON user.leader_id = pp.id  ORDER BY user.add_time desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T10:32:37+08:00 ] 127.0.0.1 /Admin/user/getUserList?_dc=1453689156916
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined variable: where D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\UserController.class.php 第 70 行.
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_user as user left JOIN zb_department ON user.department_id = zb_department.id left JOIN zb_position ON user.position_id = zb_position.id  LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: where D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\UserController.class.php 第 77 行.
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0060s ]
+SQL: SELECT user.*,d.name as subdepartmentname,d.pid as department_pid,p.pid as leader_position_id,p.name as position_name,og.organization_name,pp.name as leader_position_name,dp.name as firstdepartmentname FROM zb_user as user left JOIN zb_department as d ON user.department_id = d.id left JOIN zb_position as p ON user.position_id = p.id left JOIN zb_organization as og ON og.organization_id = user.organization_id left JOIN zb_department as dp ON d.pid = dp.id left JOIN zb_position as pp ON user.leader_id = pp.id  ORDER BY user.add_time desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:57:29+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-25T13:57:30+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1453701449933&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0090s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0090s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') ORDER BY n.sort asc, n.id desc  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+
+[ 2016-01-25T13:57:46+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-25T13:57:48+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1453701468039&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0050s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0050s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') ORDER BY n.sort asc, n.id desc  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+
+[ 2016-01-25T13:58:16+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701496535
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0090s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:58:18+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701498104
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:18+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701498434
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:19+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701499147
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0060s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:58:21+08:00 ] 127.0.0.1 /Admin/product/productLeaderWorkList?_dc=1453701501283
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 904 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 905 行.
+NOTIC: [8] Undefined index: status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 909 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 912 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status IN (1,2,3,4,5,6) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status IN (1,2,3,4,5,6) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0040s ]
+
+[ 2016-01-25T13:58:21+08:00 ] 127.0.0.1 /Admin/product/productOnlineList?_dc=1453701501817
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1661 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1662 行.
+NOTIC: [8] Undefined index: status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1664 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1667 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status IN (6,10) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status IN (6,10) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:22+08:00 ] 127.0.0.1 /Admin/product/productLeaderAuditList?_dc=1453701502423
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1085 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1086 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1090 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status = 5 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:23+08:00 ] 127.0.0.1 /Admin/product/productWaitContractList?_dc=1453701503134
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1051 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1052 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1056 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status = 3 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:24+08:00 ] 127.0.0.1 /Admin/product/productScoreList?_dc=1453701504123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 940 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 941 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 944 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status = 2 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `zb_product_score_reason` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 102 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 96 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 94 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 74 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 70 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 69 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 65 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 10 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-01-25T13:58:25+08:00 ] 127.0.0.1 /Admin/product/contractWaitAuditList?_dc=1453701505553
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1068 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1069 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1073 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status = 4 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:25+08:00 ] 127.0.0.1 /Admin/Access/getUserPermission
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0090s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_permission` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_permission` [ RunTime:0.0050s ]
+SQL: SELECT DISTINCT r.permission_id,n.permission_name,n.permission_code FROM zb_auth_role_permission as r INNER JOIN zb_auth_permission as n on n.permission_id = r.permission_id  WHERE r.role_id IN ('69')  [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:58:26+08:00 ] 127.0.0.1 /Admin/product/productWorkList?_dc=1453701506029
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 880 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 881 行.
+NOTIC: [8] Undefined index: status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 889 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status IN (1,2,3,4,5,6) AND `creater_uid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status IN (1,2,3,4,5,6) AND `creater_uid` = 1 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:27+08:00 ] 127.0.0.1 /Admin/product/productWaitContractList?_dc=1453701507521
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1051 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1052 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1056 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status = 3 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0090s ]
+
+[ 2016-01-25T13:58:28+08:00 ] 127.0.0.1 /Admin/product/productLeaderAuditList?_dc=1453701507989
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1085 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1086 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1090 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status = 5 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:58:28+08:00 ] 127.0.0.1 /Admin/product/productOnlineList?_dc=1453701508405
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1661 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1662 行.
+NOTIC: [8] Undefined index: status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1664 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1667 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status IN (6,10) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status IN (6,10) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:28+08:00 ] 127.0.0.1 /Admin/product/productLeaderWorkList?_dc=1453701508732
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 904 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 905 行.
+NOTIC: [8] Undefined index: status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 909 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 912 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status IN (1,2,3,4,5,6) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status IN (1,2,3,4,5,6) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0050s ]
+
+[ 2016-01-25T13:58:30+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701509945
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:58:30+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701510382
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0070s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:58:32+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701512906
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0070s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:58:33+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701513789
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0060s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T13:58:56+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701536494
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0030s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:58:56+08:00 ] 127.0.0.1 /Admin/productCategory/ProductCategoryList?_dc=1453701536812
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product_category as d WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT d.*,d1.category_name as firstcategory_name FROM zb_product_category as d left JOIN zb_product_category as d1 ON d.pid = d1.id  WHERE d.status IN (1,2) AND d.leavel = 2 LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:59:06+08:00 ] 127.0.0.1 /Admin/product/productScoreList?_dc=1453701546481
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 940 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 941 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 944 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status = 2 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_product_score_reason` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 102 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 96 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 94 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 74 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 70 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 69 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 65 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 2 LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-25T13:59:15+08:00 ] 127.0.0.1 /Admin/product/getProductInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`product_num`,`category_id`,`full_name`,`short_name`,`contact_tel`,`contacter`,`channel_fee`,`creater`,`creater_uid`,`term`,`end_time`,`total_moeny`,`introduction`,`status` FROM `zb_product` WHERE `id` = 70 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT `pid` FROM `zb_product_category` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category_field_value` [ RunTime:0.0100s ]
+ERR: 1582:Incorrect parameter count in the call to native function 'ISNULL'
+ [ SQL语句 ] : SELECT ISNULL(pcf.field_type,1),ISNULL(pcf.field_option,''),pcfv.field_id,pcfv.field_name,pcfv.field_value FROM zb_product_category_field_value as pcfv left JOIN zb_product_category_field as pcf ON pcfv.field_id = pcf.id   WHERE `product_id` = '70' AND pcfv.status = 1 
+ERR: 1582:Incorrect parameter count in the call to native function 'ISNULL'
+ [ SQL语句 ] : SELECT ISNULL(pcf.field_type,1),ISNULL(pcf.field_option,''),pcfv.field_id,pcfv.field_name,pcfv.field_value FROM zb_product_category_field_value as pcfv left JOIN zb_product_category_field as pcf ON pcfv.field_id = pcf.id   WHERE `product_id` = '70' AND pcfv.status = 1 
+
+[ 2016-01-25T13:59:31+08:00 ] 127.0.0.1 /Admin/product/getProductInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`product_num`,`category_id`,`full_name`,`short_name`,`contact_tel`,`contacter`,`channel_fee`,`creater`,`creater_uid`,`term`,`end_time`,`total_moeny`,`introduction`,`status` FROM `zb_product` WHERE `id` = 70 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT `pid` FROM `zb_product_category` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_category_field_value` [ RunTime:0.0100s ]
+ERR: 1582:Incorrect parameter count in the call to native function 'ISNULL'
+ [ SQL语句 ] : SELECT ISNULL(pcf.field_type,1),ISNULL(pcf.field_option,''),pcfv.field_id,pcfv.field_name,pcfv.field_value FROM zb_product_category_field_value as pcfv left JOIN zb_product_category_field as pcf ON pcfv.field_id = pcf.id   WHERE `product_id` = '70' AND pcfv.status = 1 
+ERR: 1582:Incorrect parameter count in the call to native function 'ISNULL'
+ [ SQL语句 ] : SELECT ISNULL(pcf.field_type,1),ISNULL(pcf.field_option,''),pcfv.field_id,pcfv.field_name,pcfv.field_value FROM zb_product_category_field_value as pcfv left JOIN zb_product_category_field as pcf ON pcfv.field_id = pcf.id   WHERE `product_id` = '70' AND pcfv.status = 1 
+
+[ 2016-01-25T14:00:06+08:00 ] 127.0.0.1 /Admin/product/getProductInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`product_num`,`category_id`,`full_name`,`short_name`,`contact_tel`,`contacter`,`channel_fee`,`creater`,`creater_uid`,`term`,`end_time`,`total_moeny`,`introduction`,`status` FROM `zb_product` WHERE `id` = 70 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `zb_product_category` [ RunTime:0.0100s ]
+SQL: SELECT `pid` FROM `zb_product_category` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_product_category_field_value` [ RunTime:0.0100s ]
+SQL: SELECT pcf.field_type,pcf.field_option,pcfv.field_id,pcfv.field_name,pcfv.field_value FROM zb_product_category_field_value as pcfv left JOIN zb_product_category_field as pcf ON pcfv.field_id = pcf.id   WHERE `product_id` = '70' AND pcfv.status = 1  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zb_product_self_field_value` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `zb_product_self_field_value` WHERE `product_id` = 70  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_category_group_field_value` [ RunTime:0.0060s ]
+SQL: SELECT cgfv.id,cgfv.field_value,cgf.group_id,cg.group_name,cgf.id as field_id,cgf.field_name,cgf.field_type,cgf.field_option FROM zb_category_group_field_value as cgfv left join zb_category_group_field as cgf on cgfv.field_id = cgf.id left join zb_category_group as cg on cg.id = cgf.group_id  WHERE cgfv.product_id = '70' ORDER BY cgf.field_type ASC  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zb_product_group_score` [ RunTime:0.0060s ]
+SQL: SELECT s.*,g.group_name,d.name as department_name,d.id as department_id FROM zb_product_group_score as s left JOIN zb_category_group as g ON g.id = s.group_id left JOIN zb_user as u ON s.uid = u.id left JOIN zb_department as d ON u.department_id = d.id  WHERE s.product_id = '70'  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_product_score_reason` [ RunTime:0.0060s ]
+SQL: SELECT * FROM zb_product_score_reason as s WHERE s.product_id = '70'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_product_attachment` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`type`,`attachment_name`,`attachment_url`,`uid`,`source` FROM `zb_product_attachment` WHERE `product_id` = 70 AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`attachment_name`,`attachment_url`,`uid`,`source` FROM `zb_product_attachment` WHERE `id` = 70 AND `type` = 2 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_category_fees_field_value` [ RunTime:0.0070s ]
+SQL: SELECT `channel_fee` FROM `zb_product` WHERE `id` = 70 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT fv.product_id,fv.field_id,fv.field_value,fv.field_name FROM zb_category_fees_field_value as fv WHERE fv.product_id = '70' AND fv.status = 1  [ RunTime:0.0010s ]
+
+[ 2016-01-25T14:00:27+08:00 ] 127.0.0.1 /Admin/product/productScoreList?_dc=1453701627175
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 940 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 941 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 944 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1885 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.status = 2 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM zb_product as product WHERE product.status = 2 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `zb_product_score_reason` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 102 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 96 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 94 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 74 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 70 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 69 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 65 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 10 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_product_score_reason` WHERE `uid` = 1 AND `product_id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-01-25T14:28:46+08:00 ] 127.0.0.1 /Admin/system/getpermissionList?_dc=1453703326871
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_permission` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_permission` WHERE (  status <> 3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `permission_id`,`permission_code`,`permission_name`,`status`,`update_time` FROM `zb_auth_permission` WHERE (  status <> 3 ) ORDER BY permission_id desc LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-25T14:46:35+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-25T14:46:38+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1453704397900&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0100s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0050s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') ORDER BY n.sort asc, n.id desc  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+
+[ 2016-01-25T14:50:19+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-25T14:50:21+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1453704621102&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0090s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0090s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') ORDER BY n.sort asc, n.id desc  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+
+[ 2016-01-25T14:51:27+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-25T14:51:28+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1453704688053&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0100s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0090s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') ORDER BY n.sort asc, n.id desc  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+
+[ 2016-01-25T14:51:30+08:00 ] 127.0.0.1 /Admin/product/productFeesList?_dc=1453704690006
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1323 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1324 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1327 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.fee_status > 0 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM zb_product as product WHERE product.fee_status > 0 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-25T14:55:15+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-25T14:55:16+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1453704916303&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0100s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0050s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') ORDER BY n.sort asc, n.id desc  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+
+[ 2016-01-25T14:55:20+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-01-25T14:55:23+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1453704923177&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0090s ]
+SQL: SELECT `role_id` FROM `zb_auth_access` WHERE ( uid = 1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0060s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') ORDER BY n.sort asc, n.id desc  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 121 行.
+
+[ 2016-01-25T14:55:28+08:00 ] 127.0.0.1 /Admin/product/productFeesList?_dc=1453704928331
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1323 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1324 行.
+NOTIC: [8] Undefined index: fee_status D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1327 行.
+NOTIC: [8] Undefined index: start_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1919 行.
+NOTIC: [8] Undefined index: keyword D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\ProductController.class.php 第 1922 行.
+SQL: SHOW COLUMNS FROM `zb_product` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_product as product WHERE product.fee_status > 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM zb_product as product WHERE product.fee_status > 0 ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+

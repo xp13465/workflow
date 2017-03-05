@@ -1,0 +1,13 @@
+{
+    "items" : [
+        {
+            "name" : "aaa",
+            "title" : "ccc"
+        },
+        {
+            "name" : "ssss",
+            "title" : "ttt"
+        }
+    ],
+    "title" : "详细页面"
+}

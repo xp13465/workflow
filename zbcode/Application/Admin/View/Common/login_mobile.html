@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="format-detection" content="telephone=no"><!-- 忽略数字自动识别为电话号码 -->
+    <meta content="email=no" name="format-detection" /><!-- 忽略识别邮箱 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- 启用 WebApp 全屏模式 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> <!-- 隐藏状态栏/设置状态栏颜色 iOS6以上已经失效-->
+    <meta name="apple-mobile-web-app-title" content="资绑金融"><!-- 添加到主屏后的标题 -->
+	<title>登录页面</title>
+	<link rel="stylesheet" href="__PUBLIC__/mobile/css/login.css">
+	<script src="__PUBLIC__/mobile/lib/zepto.min.js"></script>
+	<script src="__PUBLIC__/mobile/lib/zepto-touch.js"></script>
+</head>
+<body>
+	<div class="login" id="login">
+		<div class="login_con">
+			<div class="tit">
+				<img src="__PUBLIC__/mobile/images/login_title.png" alt="">
+			</div>
+			<ul>
+				<li>
+					<input type="text" placeholder="邮箱" class="btnEmail">
+				</li>
+				<li>
+					<input type="password" placeholder="密码" class="btnPwd">
+				</li>
+				<li>
+					<button class="btn btnLoginFn">登录</button>
+				</li>
+				<li>
+					<div class="tigs">
+						<a href="{:U('common/register')}" class="fr_a">注册申请</a>
+						<a href="{:U('common/findpassword')}">忘记密码？</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="__PUBLIC__/mobile/app/login/login.js"></script>
+</html>

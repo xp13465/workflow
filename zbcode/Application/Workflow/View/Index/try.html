@@ -1,0 +1,33 @@
+
+<script src="__PUBLIC__/UI/jq/jquery-1.8.3.min1530d1.js" charset="UTF-8" type="text/javascript"></script>
+
+<pre id='cc' style='border:1px solid;'></pre>
+<script>
+
+$(function(){
+	$('.form').each(function(){
+		$(this).submit(function(){
+			var thisaa=this;
+			$.ajax({
+                cache: true,
+                type: "GET",
+                url:$(this).attr('action'),
+                data:$(this).serialize(),// ÄãµÄformid
+                async: false,
+				dataType:'text',
+                error: function(request) {
+                    alert("Connection error");
+                },
+                success: function(data) {
+					//var c=JSON.stringify(data,null,'\t');
+					var c=data;
+					$('#cc').html(c);
+					$(thisaa).after($('#cc'))
+                }
+            });
+			return false;
+		});
+	
+	});
+})
+</script>

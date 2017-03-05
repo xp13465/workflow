@@ -1,0 +1,18 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">合同附件资料</div>
+</header>
+<div class="filelist">
+	<dl>
+		<dt>合同附件资料</dt>
+		<dd class="clearit.attatch.docfix">
+			{{ for(var k in it.attatch.doc) { }}
+			<li>
+				<a href='{{=it.attatch.doc[k].attachment_url}}'><img src="/Public/mobile/images/icon_word.png" alt=""></a> <p>{{=it.attatch.doc[k].attachment_name}}</p>
+			</li>
+			{{  } }}
+		</dd>
+	</dl>
+
+</div>

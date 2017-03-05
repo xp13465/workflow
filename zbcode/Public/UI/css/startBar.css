@@ -1,0 +1,34 @@
+.x-toolbar{
+    padding-left: 4px !important;
+    height: 50px;
+    padding: 0px;
+    /*//margin-top: 5px;*/
+    background-color: #2f273f;
+    width: 100%;
+    color: white;
+}
+.x-toolbar img{
+    padding: 0px;
+    margin: 0px;
+}
+.x-toolbar li{
+    float: left;
+    list-style: none;
+    width:150px;margin-left:0px;line-height:48px;
+}
+.x-toolbar ul{
+    margin: 0px;
+    padding: 0px;
+}
+.x-toolbar-item{
+    height: 100%;
+    border: 1px solid #434157;
+    padding-left: 10px;
+    background-color: #2f273f;
+}
+.ux-start-button{
+    height: 100%;
+    border-right: 1px solid #434157;
+    padding-left: 10px;
+    background-color: #2f273f;
+}

@@ -1,0 +1,87 @@
+.message-mask{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	background: #000;
+	z-index: 10000;
+    left: 0;
+    top: 0;
+}
+.message-header {
+	/*display: none;*/
+}
+.message-window{
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    background: #FFFFFF;
+    z-index: 10001;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -75px;
+    /* border: 1px solid #2E60D0; */
+    /* box-shadow: 0 0 40px #2E60D0; */
+    padding: 10px;
+    /* border-radius: 5px; */
+    border: 1px solid #DEDEDE;
+}
+.message-body{
+    text-align: center;
+    height: 59px;
+    /* background: #EFEFEF; */
+    /* padding: 10px; */
+    border-bottom: 1px solid #EFEFEF;
+}
+.message-body .message-content{
+    text-align: center;
+    font-size: 1.4rem;
+    padding-top: 10px;
+}
+.message-input{
+	border: 1px solid #AFAFAF;
+	padding: 2px;
+}
+.message-btn{
+    text-align: center;
+    /* padding: 10px 0; */
+    background: none;
+    margin-top: 15px;
+}
+.message-btn .btn{
+	margin: 0 5px; 
+    padding: 5px 10px;
+    background: #31A1E3;
+    border: 1px solid #31A1E3;
+    color: #FFF;
+}
+.message-icon-common{
+    display: inline-block;
+    text-align: center;
+    
+    width: 25px;
+    height: 25px;
+}
+.message-icon-reject{
+    background:  url('../../images/icon_del.png') no-repeat 0 0;
+    background-size:25px 25px;
+  
+}
+.message-icon-pause{
+    background:  url('../../images/icon_stop.png') no-repeat 0 0;
+    background-size:25px 25px;
+  
+}
+.message-icon-cancel{
+    background:  url('../../images/icon_exit.png') no-repeat 0 0;
+    background-size:25px 25px;
+}
+.message-icon-continue{
+    background:  url('../../images/icon_go.png') no-repeat 0 0;
+    background-size:25px 25px;
+}
+.message-icon-submit{
+    background:  url('../../images/icon_btn.png') no-repeat 0 0;
+    background-size:25px 25px;
+}

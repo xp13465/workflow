@@ -1,0 +1,2309 @@
+[ 2016-03-29T08:31:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T08:31:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T08:33:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T08:33:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:35:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:35:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:37:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:37:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:39:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:39:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0080s ]
+
+[ 2016-03-29T08:41:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:43:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:45:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:47:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:49:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T08:49:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:51:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:53:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:55:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T08:57:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T08:59:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T08:59:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:01:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:03:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:05:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:07:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:09:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0080s ]
+
+[ 2016-03-29T09:09:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:11:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:13:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:15:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:17:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:19:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:19:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T09:21:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:23:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:25:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:27:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:29:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:29:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0090s ]
+
+[ 2016-03-29T09:31:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:33:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:35:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:37:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:39:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0060s ]
+
+[ 2016-03-29T09:39:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:41:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:43:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:45:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:47:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:49:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:49:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0050s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T09:51:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:53:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:55:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T09:57:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T09:59:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0050s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0060s ]
+
+[ 2016-03-29T09:59:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:01:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:03:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:05:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:07:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:09:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0050s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0050s ]
+
+[ 2016-03-29T10:09:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:11:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:13:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:15:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:17:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:19:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0080s ]
+
+[ 2016-03-29T10:19:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:21:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:23:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:25:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:27:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:29:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T10:29:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:31:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:33:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:35:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:37:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:39:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T10:39:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0020s ]
+
+[ 2016-03-29T10:41:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:43:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:45:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:47:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:49:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:49:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0110s ]
+
+[ 2016-03-29T10:51:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:53:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T10:55:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:57:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:59:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T10:59:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T11:01:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:03:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:05:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:07:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:09:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:09:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T11:11:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:13:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:15:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:17:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:19:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:19:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T11:21:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:23:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:25:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:27:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:29:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:29:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0050s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0050s ]
+
+[ 2016-03-29T11:31:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:33:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:35:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:37:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:39:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T11:39:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:41:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:43:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:45:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:47:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:49:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0080s ]
+
+[ 2016-03-29T11:49:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:51:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:53:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:55:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T11:57:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T11:59:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T11:59:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:01:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:03:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:05:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:07:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:09:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0080s ]
+
+[ 2016-03-29T12:09:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0060s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0020s ]
+
+[ 2016-03-29T12:11:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T12:13:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:15:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:17:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:19:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0080s ]
+
+[ 2016-03-29T12:19:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:21:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T12:23:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:25:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:27:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T12:29:25+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0110s ]
+
+[ 2016-03-29T12:29:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T13:17:22+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:19:23+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T13:21:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T13:23:24+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0020s ]
+
+[ 2016-03-29T13:25:22+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0060s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0050s ]
+
+[ 2016-03-29T13:25:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T13:27:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:29:30+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.045003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.188011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.190011s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:31:27+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040002s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:33:28+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.034002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.135008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.136008s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:35:33+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.159009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.160009s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0050s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0060s ]
+
+[ 2016-03-29T13:35:33+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.158009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.160009s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:37:26+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T13:39:26+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031002s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T13:41:30+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.112006s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.071004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.071004s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T13:43:30+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.023001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030002s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:45:27+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.023002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.023002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024002s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0050s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0050s ]
+
+[ 2016-03-29T13:45:27+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.024002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.023002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.024002s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0020s ]
+
+[ 2016-03-29T13:47:28+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.046002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.248014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.248014s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:49:27+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.024002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.038002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038002s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:51:29+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:53:27+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015001s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T13:55:24+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.050003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.032002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033002s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0080s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0060s ]
+
+[ 2016-03-29T13:55:25+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T13:57:26+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.035002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.072004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.072004s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0030s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0020s ]
+
+[ 2016-03-29T13:59:28+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.022001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.179010s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.179010s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T14:01:27+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.068004s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.047003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.047003s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0030s ]
+
+[ 2016-03-29T14:03:27+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.033002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034002s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0050s ]
+
+[ 2016-03-29T14:20:24+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.404023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.109006s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.109006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.131007s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.131007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.809047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.809047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.582033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.582033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.249014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.249014s ]
+
+[ 2016-03-29T14:20:32+08:00 ] 127.0.0.1 /Admin/Message/getPublicMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 92 行.
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `zb_public_message` [ RunTime:0.0120s ]
+SQL: SELECT a.*,IF(ISNULL(b.id),0,1) as is_view FROM zb_public_message as a left JOIN zb_public_message_log as b on a.id = b.message_id and b.uid = 1  WHERE (  a.status = 1 ) ORDER BY a.add_time desc LIMIT 0,2   [ RunTime:0.0070s ]
+
+[ 2016-03-29T14:20:32+08:00 ] 127.0.0.1 /Admin/Access/getUserNodeList?_dc=1459232432055&page=1&start=0&limit=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_auth_access` [ RunTime:0.0100s ]
+SQL: SELECT aa.role_id FROM zb_auth_access as aa left JOIN zb_auth_role as ar ON aa.role_id = ar.id  WHERE aa.uid = 1 AND ar.status = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role_node` [ RunTime:0.0100s ]
+SQL: SELECT DISTINCT r.node_id,n.name,n.pid,n.module,n.iconCls,n.group,n.url FROM zb_auth_role_node as r INNER JOIN zb_auth_node as n on n.id = r.node_id  WHERE r.role_id IN ('69') AND n.type = 1 AND n.status = 1 ORDER BY n.sort asc, n.id desc  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Common\Common\function.php 第 122 行.
+
+[ 2016-03-29T14:20:33+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T14:22:32+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+
+[ 2016-03-29T14:24:32+08:00 ] 127.0.0.1 /Admin/Message/getUserMessageList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user_message` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: add_time D:\WEB\192.168.1.126\zbcode\Application\Admin\Model\UserMessageModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `zb_user_message` WHERE `uid` = 1 AND `is_view` = 1 AND `status` = 1 ORDER BY add_time desc LIMIT 0,5   [ RunTime:0.0040s ]
+

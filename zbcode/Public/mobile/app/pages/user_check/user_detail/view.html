@@ -1,0 +1,49 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">注册账号审核</div>
+</header>
+<div class="meslist">
+	<ul class="ul">
+		<li>
+			<dl>
+
+				<dt class="product">
+				<p class="p1">
+				<div>{{=it.realname}}</div>
+				</p>
+				<p class="p2">{{=it.add_time}}</p>
+				</dt>
+				<dt class="setting">
+					<span>{{=it.organization_name}}</span>
+				</dt>
+			</dl>
+		</li>
+	</ul>
+	<div class="infolist">
+		<ul>
+			<li>
+				一级部门
+			<span class="fr">
+            {{=it.firstdepartment_name}}
+			</span>
+			</li>
+			<li>
+				二级部门
+			<span class="fr">
+				{{=it.department_name}}
+			</span>
+			</li>
+			<li>
+				担任职位
+				<span class="fr">
+				{{=it.position_name}}
+				</span>
+			</li>
+		</ul>
+	</div>
+	<div class="dis_box">
+		<div><button class="btn_red" tap-event = "reject_user" params = '{"id":"{{=it.id}}"}'>拒绝</button></div>
+		<div><button class="btn_blur" tap-event = "assign_role" params = '{"id":"{{=it.id}}"}'>角色分配</button></div>
+	</div>
+</div>

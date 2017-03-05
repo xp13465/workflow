@@ -1,0 +1,20 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">角色分配</div>
+</header>
+<div class="Rolelist">
+	<form name="theform" id="theform" method="post">
+		<input type="hidden" name="uid" id="uid" value="{{=it.uid}}">
+	<ul>
+		{{ for (var i = 0, l = it.items.length; i < l; i++) { }}
+		<li >
+			<i {{ if (it.items[i].selected==1){ }}class="cur"{{ }else{ }}class=""{{ }}} tap-event="assign_user_role" params = '{"id":"{{=it.items[i].id}}"}' ></i>
+			<p class="p1">{{=it.items[i].title}}</p>
+			<p class="p2">{{=it.items[i].remark}}</p>
+		</li>
+		{{ } }}
+	</ul>
+		</form>
+</div>
+</div>

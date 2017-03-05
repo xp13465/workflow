@@ -1,0 +1,1427 @@
+[ 2016-03-31T17:02:10+08:00 ] 127.0.0.1 /workflow/request/form/requestid/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = -1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0080s ]
+SQL: SELECT `nodeid` FROM `workflow_node` WHERE `workflowid` = 1 AND `nodetype` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid   WHERE a.requestid = -1 AND b.response = 0 AND b.type IN ('3','4') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = -1 AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0070s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0070s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0070s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = null LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.id FROM workflow_requestbase a INNER JOIN workflow_formtable b on a.requestid = b.requestid  WHERE a.requestid = -1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = null AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0080s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = -1 GROUP BY a.id  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: showtype D:\WEB\192.168.1.126\zbcode\Application\Workflow\Controller\RequestController.class.php 第 182 行.
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:15:26+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '-1' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0120s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0120s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0110s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0010s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_requestbase` (`formtableid`,`requestname`,`workflowid`,`nodeid`,`status`,`createuser`,`createtime`) VALUES ('1','13123','1','1','1','1','2016-03-31 17:15:26') [ RunTime:0.0190s ]
+SQL: INSERT INTO `workflow_formtable1` (`xingming`,`riqi`,`shixiang`,`shuliang`,`jine`,`shijian`,`xuanxiang`,`select`,`beizhu`,`fujian`,`yuangong`,`bumen`,`requestid`) VALUES ('414','141','414','14','144','114','3','1','1,39','','0','0','136') [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt2` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('136','2','','0','','','134','1') [ RunTime:0.0620s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt2` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('136','2','','0','','','134','1') [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt3` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('136','3','','0','','','134','1') [ RunTime:0.0180s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt3` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('136','3','','0','','','134','1') [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt3` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('136','3','','0','','','134','1') [ RunTime:0.0150s ]
+
+[ 2016-03-31T17:15:27+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0130s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0140s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0060s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0100s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0120s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0120s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:15:37+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0100s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0070s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0080s ]
+SQL: SELECT `id` FROM `workflow_formtable1` WHERE (  136 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_requestbase` SET `formtableid`='1',`requestname`='13123',`modifyuser`='1',`modifytime`='2016-03-31 17:15:37' WHERE `requestid` = 136 [ RunTime:0.0240s ]
+SQL: UPDATE `workflow_formtable1` SET `xingming`='414',`riqi`='0000-00-00',`shixiang`='414',`shuliang`='14',`jine`='144.00',`shijian`='0000-00-00 00:00:00',`xuanxiang`='3',`select`='1',`beizhu`='1,39',`fujian`='',`yuangong`='0',`bumen`='0' WHERE `requestid` = 136 [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='42',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 42 [ RunTime:0.0230s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='43',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 43 [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='39',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 39 [ RunTime:0.0280s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='40',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 40 [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='41',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 41 [ RunTime:0.0150s ]
+
+[ 2016-03-31T17:15:38+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0120s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0030s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0030s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0110s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0110s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:16:05+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0120s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0120s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0070s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0010s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0120s ]
+SQL: SELECT `id` FROM `workflow_formtable1` WHERE (  136 ) LIMIT 1   [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_requestbase` SET `formtableid`='1',`requestname`='13123',`modifyuser`='1',`modifytime`='2016-03-31 17:16:05' WHERE `requestid` = 136 [ RunTime:0.0190s ]
+SQL: UPDATE `workflow_formtable1` SET `xingming`='414',`riqi`='0000-00-00',`shixiang`='414',`shuliang`='14',`jine`='144.00',`shijian`='0000-00-00 00:00:00',`xuanxiang`='3',`select`='1',`beizhu`='1,39',`fujian`='',`yuangong`='0',`bumen`='0' WHERE `requestid` = 136 [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='42',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 42 [ RunTime:0.0210s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='43',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 43 [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='39',`price`='0.00',`num`='13',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 39 [ RunTime:0.0220s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='40',`price`='0.00',`num`='3',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 40 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='41',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 41 [ RunTime:0.0190s ]
+
+[ 2016-03-31T17:16:06+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0100s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0030s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0030s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0120s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0080s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:17:02+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0070s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0060s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+
+[ 2016-03-31T17:20:58+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0100s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0110s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0120s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0030s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0110s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0120s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:20:59+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0120s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+
+[ 2016-03-31T17:21:22+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0310s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0120s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0120s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0110s ]
+SQL: SELECT `id` FROM `workflow_formtable1` WHERE (  136 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_requestbase` SET `formtableid`='1',`requestname`='13123',`modifyuser`='1',`modifytime`='2016-03-31 17:21:22' WHERE `requestid` = 136 [ RunTime:0.0400s ]
+SQL: UPDATE `workflow_formtable1` SET `xingming`='414',`riqi`='0000-00-00',`shixiang`='414',`shuliang`='14',`jine`='144.00',`shijian`='0000-00-00 00:00:00',`xuanxiang`='3',`select`='1',`beizhu`='1,39',`fujian`='',`yuangong`='0',`bumen`='0' WHERE `requestid` = 136 [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='42',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 42 [ RunTime:0.0290s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='43',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 43 [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='39',`price`='0.00',`num`='13',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 39 [ RunTime:0.0300s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='40',`price`='0.00',`num`='3',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 40 [ RunTime:0.0220s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='41',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 41 [ RunTime:0.0130s ]
+
+[ 2016-03-31T17:21:23+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0130s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0170s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0160s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0090s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0160s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0090s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0080s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0090s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0090s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0090s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0090s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0140s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0180s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0130s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0120s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-31T17:21:26+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0120s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0110s ]
+SQL: SELECT `id` FROM `workflow_formtable1` WHERE (  136 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_requestbase` SET `formtableid`='1',`requestname`='13123',`modifyuser`='1',`modifytime`='2016-03-31 17:21:26' WHERE `requestid` = 136 [ RunTime:0.0350s ]
+SQL: UPDATE `workflow_formtable1` SET `xingming`='414',`riqi`='0000-00-00',`shixiang`='414',`shuliang`='14',`jine`='144.00',`shijian`='0000-00-00 00:00:00',`xuanxiang`='3',`select`='1',`beizhu`='1,39',`fujian`='',`yuangong`='0',`bumen`='0' WHERE `requestid` = 136 [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='42',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 42 [ RunTime:0.0210s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='43',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 43 [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='39',`price`='0.00',`num`='13',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 39 [ RunTime:0.0210s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='40',`price`='0.00',`num`='3',`xiaoji`='0.00',`select`='1',`mainid`='1',`workflowid`='1' WHERE `id` = 40 [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='41',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 41 [ RunTime:0.0160s ]
+
+[ 2016-03-31T17:21:27+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0090s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0110s ]
+SQL: SELECT `id` FROM `workflow_formtable1` WHERE (  136 ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_requestbase` SET `formtableid`='1',`requestname`='13123',`modifyuser`='1',`modifytime`='2016-03-31 17:21:26' WHERE `requestid` = 136 [ RunTime:0.0190s ]
+SQL: UPDATE `workflow_formtable1` SET `xingming`='414',`riqi`='0000-00-00',`shixiang`='414',`shuliang`='14',`jine`='144.00',`shijian`='0000-00-00 00:00:00',`xuanxiang`='3',`select`='1',`beizhu`='1,39',`fujian`='',`yuangong`='0',`bumen`='0' WHERE `requestid` = 136 [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='42',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 42 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='43',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 43 [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='39',`price`='0.00',`num`='13',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 39 [ RunTime:0.0210s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='40',`price`='0.00',`num`='3',`xiaoji`='0.00',`select`='1',`mainid`='1',`workflowid`='1' WHERE `id` = 40 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='41',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 41 [ RunTime:0.0180s ]
+
+[ 2016-03-31T17:21:28+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0120s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0110s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0060s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0040s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0070s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0110s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0100s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:23:51+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0110s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0130s ]
+SQL: SELECT `id` FROM `workflow_formtable1` WHERE (  136 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_requestbase` SET `formtableid`='1',`requestname`='13123',`modifyuser`='1',`modifytime`='2016-03-31 17:23:51' WHERE `requestid` = 136 [ RunTime:0.0330s ]
+SQL: UPDATE `workflow_formtable1` SET `xingming`='414',`riqi`='0000-00-00',`shixiang`='414',`shuliang`='14',`jine`='144.00',`shijian`='0000-00-00 00:00:00',`xuanxiang`='3',`select`='1',`beizhu`='1,39',`fujian`='',`yuangong`='0',`bumen`='0' WHERE `requestid` = 136 [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='42',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 42 [ RunTime:0.0290s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='43',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 43 [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='39',`price`='0.00',`num`='13',`xiaoji`='0.00',`select`='3',`mainid`='1',`workflowid`='1' WHERE `id` = 39 [ RunTime:0.0190s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='40',`price`='0.00',`num`='3',`xiaoji`='0.00',`select`='1',`mainid`='1',`workflowid`='1' WHERE `id` = 40 [ RunTime:0.0200s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='41',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 41 [ RunTime:0.0160s ]
+
+[ 2016-03-31T17:23:52+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0120s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0120s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0010s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0030s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0060s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0120s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0120s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-31T17:23:56+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '136' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0070s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0070s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0030s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0110s ]
+SQL: SELECT `id` FROM `workflow_formtable1` WHERE (  136 ) LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_requestbase` SET `formtableid`='1',`requestname`='13123',`modifyuser`='1',`modifytime`='2016-03-31 17:23:55' WHERE `requestid` = 136 [ RunTime:0.0390s ]
+SQL: UPDATE `workflow_formtable1` SET `xingming`='414',`riqi`='0000-00-00',`shixiang`='414',`shuliang`='14',`jine`='144.00',`shijian`='0000-00-00 00:00:00',`xuanxiang`='3',`select`='1',`beizhu`='1,39',`fujian`='',`yuangong`='0',`bumen`='0' WHERE `requestid` = 136 [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='42',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='1',`mainid`='1',`workflowid`='1' WHERE `id` = 42 [ RunTime:0.0280s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt2` SET `requestid`='136',`formtableid`='2',`id`='43',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='3',`mainid`='1',`workflowid`='1' WHERE `id` = 43 [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='39',`price`='0.00',`num`='13',`xiaoji`='0.00',`select`='3',`mainid`='1',`workflowid`='1' WHERE `id` = 39 [ RunTime:0.0290s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='40',`price`='0.00',`num`='3',`xiaoji`='0.00',`select`='1',`mainid`='1',`workflowid`='1' WHERE `id` = 40 [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: UPDATE `workflow_formtable1dt3` SET `requestid`='136',`formtableid`='3',`id`='41',`price`='0.00',`num`='0',`xiaoji`='0.00',`select`='',`mainid`='1',`workflowid`='1' WHERE `id` = 41 [ RunTime:0.0160s ]
+
+[ 2016-03-31T17:23:56+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0090s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0030s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0100s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0100s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-03-31T17:23:59+08:00 ] 127.0.0.1 /workflow/request/form/requestid/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0100s ]
+SQL: SELECT `nodeid` FROM `workflow_node` WHERE `workflowid` = 1 AND `nodetype` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid   WHERE a.requestid = -1 AND b.response = 0 AND b.type IN ('3','4') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response is null LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = -1 AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0010s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0080s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0050s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0030s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = -1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = null LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.id FROM workflow_requestbase a INNER JOIN workflow_formtable b on a.requestid = b.requestid  WHERE a.requestid = -1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = null AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0090s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = -1 GROUP BY a.id  [ RunTime:0.0040s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:24:01+08:00 ] 127.0.0.1 /workflow/request/form/requestid/136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '136' AND b.response is null LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '136' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 136 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '136' LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 136  [ RunTime:0.0030s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 136  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0110s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '136' GROUP BY a.id  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0110s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-31T17:24:02+08:00 ] 127.0.0.1 /workflow/request/form/requestid/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = -1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0070s ]
+SQL: SELECT `nodeid` FROM `workflow_node` WHERE `workflowid` = 1 AND `nodetype` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid   WHERE a.requestid = -1 AND b.response = 0 AND b.type IN ('3','4') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = -1 AND b.response is null LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = -1 AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0080s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0080s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0070s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0010s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = -1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = null LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.id FROM workflow_requestbase a INNER JOIN workflow_formtable b on a.requestid = b.requestid  WHERE a.requestid = -1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = null AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0110s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = -1 GROUP BY a.id  [ RunTime:0.0060s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-03-31T17:24:09+08:00 ] 127.0.0.1 /Workflow/Request/formSubmit/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0130s ]
+SQL: SELECT b.nodetype,a.nodeid FROM workflow_requestbase a INNER JOIN workflow_node b on a.nodeid = b.nodeid  WHERE `requestid` = '-1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `workflow` WHERE `workflowid` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0130s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0070s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0010s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0050s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined offset: 1 D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 158 行.
+SQL: SHOW COLUMNS FROM `workflow_formtable1` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_requestbase` (`formtableid`,`requestname`,`workflowid`,`nodeid`,`status`,`createuser`,`createtime`) VALUES ('1','13123','1','1','1','1','2016-03-31 17:24:08') [ RunTime:0.0470s ]
+SQL: INSERT INTO `workflow_formtable1` (`xingming`,`riqi`,`shixiang`,`shuliang`,`jine`,`shijian`,`xuanxiang`,`select`,`beizhu`,`fujian`,`yuangong`,`bumen`,`requestid`) VALUES ('414','141','414','14','144','114','3','1','1,39','','0','0','137') [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt2` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('137','2','','0','','1,2','135','1') [ RunTime:0.0630s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt2` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('137','2','','0','','2','135','1') [ RunTime:0.0200s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt2` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('137','2','','0','','3','135','1') [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0110s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt3` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('137','3','','0','','3','135','1') [ RunTime:0.0290s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt3` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('137','3','','0','','3','135','1') [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: id D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 268 行.
+NOTIC: [8] Undefined index: validate D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\WEB\192.168.1.126\zbcode\Framework\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `workflow_formtable1dt3` (`requestid`,`formtableid`,`price`,`num`,`xiaoji`,`select`,`mainid`,`workflowid`) VALUES ('137','3','','0','','3','135','1') [ RunTime:0.0160s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 137 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '137' AND b.response = 0 AND b.afternode = '1' AND b.type IN ('1') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '137' AND b.response is null LIMIT 1   [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0120s ]
+SQL: INSERT INTO `workflow_requestbase_processlog` (`requestid`,`response`,`beforenode`,`beforeuser`,`afternode`,`afteruser`,`type`,`status`,`memo`,`createtime`,`modifytime`,`modifyuser`,`createuser`) VALUES ('137','1','0','0','1','1','1','1','创建流程！','2016-03-31 17:24:09','2016-03-31 17:24:09','1','1') [ RunTime:0.0020s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 137 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT group_concat(b.afteruser) as uids FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '137' AND b.response = 0 AND b.type IN ('1','2','5') LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_outlet` [ RunTime:0.0110s ]
+SQL: SELECT `afternode`,`beforenode`,`conditiondesc`,`conditionsql` FROM `workflow_outlet` WHERE `workflowid` = 1 AND `type` = 1 AND `beforenode` = 1 ORDER BY `order` asc  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_process` [ RunTime:0.0070s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 137 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '137' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0070s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 137  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 137  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_process` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `workflow_node_process` WHERE `workflowid` = 1 AND `nodeid` = 2  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_node_process_rule` [ RunTime:0.0080s ]
+SQL: SELECT * FROM workflow_node_process_rule a WHERE `processid` = 2 ORDER BY `order` asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `zibang`.`zb_user` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`realname`,`email` FROM zibang.zb_user WHERE `id` IN ('1')  [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `workflow_formtable1` WHERE ( requestid = '137' and `shixiang`  = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM workflow_node_process_rule a WHERE `processid` = 5 ORDER BY `order` asc  [ RunTime:0.0040s ]
+SQL: SELECT `id`,`realname`,`email` FROM zibang.zb_user WHERE `id` IN ('1')  [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `workflow_formtable1` WHERE ( requestid = '137' and `jine`  >100 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `workflow_requestbase_processlog` (`requestid`,`beforeuser`,`beforenode`,`afternode`,`response`,`afteruser`,`createuser`,`createtime`,`type`) VALUES ('137','1','1','2','0','1','1','2016-03-31 17:24:09','4') [ RunTime:0.0020s ]
+SQL: INSERT INTO `workflow_requestbase_processlog` (`requestid`,`beforeuser`,`beforenode`,`afternode`,`response`,`afteruser`,`createuser`,`createtime`,`type`) VALUES ('137','1','1','2','0','1','1','2016-03-31 17:24:09','2') [ RunTime:0.0020s ]
+SQL: UPDATE `workflow_requestbase` SET `nodeid`='2',`status`='2',`cur_process`='1' WHERE `requestid` = 137 [ RunTime:0.0020s ]
+
+[ 2016-03-31T17:24:10+08:00 ] 127.0.0.1 /workflow/request/form/requestid/137
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 137 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '137' AND b.response = 0 AND b.afternode = '2' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '137' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0120s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '2' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '2' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '2' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 35 行.
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 137 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '2' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '137' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '2' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15 FROM `workflow_formtable1dt2` WHERE `requestid` = 137  [ RunTime:0.0030s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '2' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0070s ]
+SQL: SELECT `id`,`mainid` FROM `workflow_formtable1dt3` WHERE `requestid` = 137  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0070s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '137' GROUP BY a.id  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0070s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 2 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:24:32+08:00 ] 127.0.0.1 /workflow/request/form/requestid/131
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0060s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 131 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '131' AND b.response = 0 AND b.afternode = '4' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '131' AND b.response is null LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid   WHERE a.requestid = '131' AND b.response = 0 AND b.type IN ('3','4') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '131' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0070s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0050s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0010s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0050s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 35 行.
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 131 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '131' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15 FROM `workflow_formtable1dt2` WHERE `requestid` = 131  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`mainid` FROM `workflow_formtable1dt3` WHERE `requestid` = 131  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0080s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '131' GROUP BY a.id  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0080s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 4 LIMIT 1   [ RunTime:0.0020s ]
+NOTIC: [2] Illegal offset type D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 966 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:46:47+08:00 ] 127.0.0.1 /workflow/request/form/requestid/44
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0110s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 44 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '44' AND b.response = 0 AND b.afternode = '2' AND b.type IN ('1','2','5') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '44' AND b.response is null LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid   WHERE a.requestid = '44' AND b.response = 0 AND b.type IN ('3','4') AND ( b.afteruser = '1' or b.afteruser like '1,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '44' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '44' AND ( FIND_IN_SET('1', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0110s ]
+SQL: SELECT `nodeid` FROM `workflow_node` WHERE `workflowid` = 1 AND `nodetype` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0070s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0010s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0080s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 16  [ RunTime:0.0020s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 20  [ RunTime:0.0020s ]
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 44 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '44' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15,`select` as field16 FROM `workflow_formtable1dt2` WHERE `requestid` = 44  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '1' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`mainid`,`price` as field17,`num` as field18,`xiaoji` as field19,`select` as field20 FROM `workflow_formtable1dt3` WHERE `requestid` = 44  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0110s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '44' GROUP BY a.id  [ RunTime:0.0070s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 1 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Illegal offset type D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 941 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-31T17:49:52+08:00 ] 127.0.0.1 /workflow/request/form/requestid/133
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 133 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '133' AND b.response = 0 AND b.afternode = '2' AND b.type IN ('1','2','5') AND ( b.afteruser = '39' or b.afteruser like '39,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '133' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid   WHERE a.requestid = '133' AND b.response = 0 AND b.type IN ('3','4') AND ( b.afteruser = '39' or b.afteruser like '39,%' ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '133' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '133' AND ( FIND_IN_SET('39', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2016-03-31T17:49:56+08:00 ] 127.0.0.1 /workflow/request/form/requestid/134
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0120s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 134 LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '134' AND b.response = 0 AND b.afternode = '2' AND b.type IN ('1','2','5') AND ( b.afteruser = '39' or b.afteruser like '39,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '134' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid   WHERE a.requestid = '134' AND b.response = 0 AND b.type IN ('3','4') AND ( b.afteruser = '39' or b.afteruser like '39,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '134' AND b.response is null LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '134' AND ( FIND_IN_SET('39', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-03-31T17:50:00+08:00 ] 127.0.0.1 /workflow/request/form/requestid/132
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase` [ RunTime:0.0130s ]
+SQL: SELECT `workflowid`,`formtableid`,`nodeid`,`status`,`createuser` FROM `workflow_requestbase` WHERE `requestid` = 132 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '132' AND b.response = 0 AND b.afternode = '4' AND b.type IN ('1','2','5') AND ( b.afteruser = '39' or b.afteruser like '39,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '132' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid   WHERE a.requestid = '132' AND b.response = 0 AND b.type IN ('3','4') AND ( b.afteruser = '39' or b.afteruser like '39,%' ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.*,a.*,b.status as bstatus,c.nodetype FROM workflow_requestbase a inner JOIN workflow_node c on a.nodeid = c.nodeid left JOIN workflow_requestbase_processlog b on a.requestid = b.requestid and a.nodeid = b.afternode  WHERE a.requestid = '132' AND b.response is null LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT b.afternode FROM workflow_requestbase a inner JOIN workflow_requestbase_processlog b on a.requestid = b.requestid  WHERE a.requestid = '132' AND ( FIND_IN_SET('39', b.afteruser) ) ORDER BY b.createtime desc LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_node_fields` [ RunTime:0.0110s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '1' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `formtable_fields_values` [ RunTime:0.0100s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 10  [ RunTime:0.0020s ]
+SQL: SELECT `key`,`value`,`isdefault` FROM `formtable_fields_values` WHERE `fieldid` = 11  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `formtable` [ RunTime:0.0110s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0010s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '2' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+SQL: SELECT a.fieldid,a.order,a.nodeid,b.formtableid,b.fieldname,b.fieldtitle,b.fieldtypechild,b.fieldtype,a.type,a.default,a.prompt,b.length FROM workflow_node_fields a inner JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '3' ORDER BY  a.order asc,a.id asc  [ RunTime:0.0030s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 41 行.
+SQL: SELECT `formtableid`,`nodeid` FROM `workflow_requestbase` WHERE `requestid` = 132 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('b.`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT a.*,b.id,b.`xingming` as field1,b.`riqi` as field2,b.`shixiang` as field3,b.`beizhu` as field4,b.`shuliang` as field5,b.`jine` as field6,b.`shijian` as field7,b.`fujian` as field8,b.`yuangong` as field9,b.`xuanxiang` as field10,b.`select` as field11,b.`bumen` as field12 FROM workflow_requestbase a INNER JOIN workflow_formtable1 b on a.requestid = b.requestid  WHERE a.requestid = '132' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `formtableid` FROM `formtable` WHERE `parentid` = 1 AND `validflag` = 1  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '2' LIMIT 1   [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt2` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`mainid`,`price` as field13,`num` as field14,`xiaoji` as field15 FROM `workflow_formtable1dt2` WHERE `requestid` = 132  [ RunTime:0.0020s ]
+SQL: SELECT group_concat(concat('`',b.fieldname,'` as ','field',b.fieldid)) as sqlfields FROM workflow_node_fields a INNER JOIN formtable_fields b on a.fieldid = b.fieldid  WHERE `nodeid` = '4' AND `formtableid` = '3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_formtable1dt3` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`mainid` FROM `workflow_formtable1dt3` WHERE `requestid` = 132  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `workflow_requestbase_processlog` [ RunTime:0.0110s ]
+SQL: SELECT a.*,e.nodename as beforenodename,f.nodename as afternodename,b.realname as brforeusername,d.realname as modifyusername,group_concat(c.id) as afteruserids,group_concat(c.realname) as afterusernames FROM workflow_requestbase_processlog a left JOIN zibang.zb_user b on b.id = a.createuser left JOIN zibang.zb_user c on find_in_set(c.id,a.afteruser) left JOIN zibang.zb_user d on  d.id = a.modifyuser left JOIN workflow_node e on  e.nodeid = a.beforenode left JOIN workflow_node f on  f.nodeid = a.afternode  WHERE `requestid` = '132' GROUP BY a.id  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `workflow_node` [ RunTime:0.0100s ]
+SQL: SELECT `nodetype` FROM `workflow_node` WHERE `nodeid` = 4 LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] Illegal offset type D:\WEB\192.168.1.126\zbcode\Application\Workflow\Model\WorkflowRequestbaseModel.class.php 第 941 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

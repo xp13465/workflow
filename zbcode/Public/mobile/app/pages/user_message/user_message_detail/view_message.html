@@ -1,0 +1,19 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break"  tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search">
+	<div class="cen">消息</div>
+</header>
+<nav class="same_nav">
+	<ul class="ul clearfix">
+		<!--<li>最新公告</li>-->
+		<li  class="cur">待办事项</li>
+	</ul>
+</nav>
+<div class="showPageText">
+	<div class="tit">{{=it.title}}</div>
+	<div class="tig">{{=it.add_time}}</div>
+	<div class="con">{{=it.content}}</div>
+	<div class="cen">
+		<button class="btn_80" tap-event="del_user_message"  params = '{"id":"{{=it.id}}"}' permission="msg-del">删除</button>
+	</div>
+</div>

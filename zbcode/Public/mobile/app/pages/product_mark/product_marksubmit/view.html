@@ -1,0 +1,64 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">评分</div>
+</header>
+<div class="tablelist">
+	{{ for(var k in it.scoreInfo) { }}
+	<dl>
+		<dt>
+			<span class="tit">{{=it.scoreInfo[k].group_name}}</span>
+			<span class="fr"></span>
+		</dt>
+		{{ for(var j in it.scoreInfo[k].fields) { }}
+		<dd >
+			{{=it.scoreInfo[k].fields[j].field_name}}
+			<span class="fr">{{=it.scoreInfo[k].fields[j].field_value}}</span>
+			{{if(j==it.scoreInfo[k].fields.length-1)  { }}
+			<div class='hiddiv'>
+			<input type='hidden' value='{{=it.scoreInfo[k].group_id}}' name='groupid'/>
+			<input type='hidden' value='{{=it.baseInfo.base.id}}' name='productid'/>
+			<input type='text' class="m-numbertext numbertext-inputEl" data-options='{"minValue":0,"maxValue":100,"stepValue":10,"decimalPrecision":0,"allowDecimals":false,"displaySkip":true}'  name='scorevalue'/>
+			</div>
+			{{ } }}
+		</dd>
+		{{ } }}
+		
+	</dl>
+		
+	{{ } }}
+	<dd>
+		评分态度
+		<span class="fr">
+			<label>
+				<input type="radio" name="status" value="1">
+				<i>通过</i>
+			</label>
+			<label>
+				<input type="radio" name="status" value="2">
+				<i>不通过</i>
+			</label>
+			<label>
+				<input type="radio" name="status" value="3">
+				<i>暂观望</i>
+			</label>
+		</span>
+	</dd>
+	<dd>
+		评分理由
+		<br/>
+		<div>
+			<textarea class="textarea" name='reason'></textarea>
+		</div>
+	</dd>
+	<div class="dis_box">
+
+		<div><button class="btn_blur" tap-event = "submit_product" params = '{"id":"{{=it.baseInfo.base.id}}"}'>提交</button></div>
+		<div><button class="btn_gray" tap-event = "cancel_product" params = '{"id":"{{=it.baseInfo.base.id}}"}'>取消</button></div>
+
+
+	</div>
+</div>
+<script type="text/javascript">
+	$('.m-numbertext').numbertext();
+</script>

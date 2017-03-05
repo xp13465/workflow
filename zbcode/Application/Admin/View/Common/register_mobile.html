@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="format-detection" content="telephone=no">
+	<title>登录页面</title>
+	<link rel="stylesheet" href="__PUBLIC__/mobile/css/login.css">
+	<script src="__PUBLIC__/mobile/lib/zepto.min.js"></script>
+	<script src="__PUBLIC__/mobile/lib/zepto-touch.js"></script>
+</head>
+<body>
+	<div class="register showOne" id="register">
+		<div class="login_con one">
+			<div class="tit">
+				<img src="__PUBLIC__/mobile/images/login_title.png" alt="">
+			</div>
+			<ul>
+				<li>
+					<input type="text" placeholder="邮箱" id="select_email">
+				</li>
+				<li>
+					<input type="password" placeholder="密码" id="select_pwd">
+				</li>
+				<li>
+					<input type="password" placeholder="确认密码" id="select_pwd_confirm">
+				</li>
+
+				<li>
+					<button class="btn" id="register_next">下一步</button>
+				</li>
+				<li>
+					<div class="tigs">
+						<a href="{:U('common/findpassword')}">忘记密码？</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="login_con two">
+			<div class="tit">
+				<img src="__PUBLIC__/mobile/images/login_title.png" alt="">
+			</div>
+			<ul>
+				<li>
+					<input type="text" placeholder="姓名" id="select_name">
+				</li>
+				<li class="select_li">
+					<img src="__PUBLIC__/mobile/images/bottom.png" alt="" class="bottom_sj">
+					<select name="" id="select_department_one" >
+						<option value="">请选择一级部门</option>
+					</select>
+				</li>
+				<li class="select_li">
+					<img src="__PUBLIC__/mobile/images/bottom.png" alt="" class="bottom_sj">
+					<select name="" id="select_department_two" >
+						<option value="">请选择二级部门</option>
+					</select>
+				</li>
+				<li class="select_li">
+					<img src="__PUBLIC__/mobile/images/bottom.png" alt="" class="bottom_sj">
+					<select name="" id="select_job">
+						<option value="">请选择职位</option>
+					</select>
+				</li>
+				<li class="select_li">
+					<img src="__PUBLIC__/mobile/images/bottom.png" alt="" class="bottom_sj">
+					<select name="" id="select_leader">
+						<option value="">请选择分管领导</option>
+					</select>
+				</li>
+				<li class="btn_two">
+					<div><button class="btn " id="register_prev">返回上一步</button></div>
+					<div><button class="btn dis" id="register_btn">提交</button></div>	
+				</li>
+				<li>
+					<div class="tigs">
+						<a href="{:U('common/login')}" class="fr_a">直接登录</a>
+						<a href="{:U('common/findpassword')}">忘记密码？</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="login_con_tigs three">
+			<p class="p2">
+				 提交成功<br/>
+				 等待审核
+			</p>
+			<p class="p3">
+				<a href="{:U('common/login')}" class="btn">回到首页</a>
+			</p>
+		</div>
+	</div>
+	<input type="hidden" name="organization_id" value="{:C('DEFAULT_ORGANIZATION')}" id="organization_id">	
+</body>
+<script src="__PUBLIC__/mobile/app/login/login.js"></script>
+</html>

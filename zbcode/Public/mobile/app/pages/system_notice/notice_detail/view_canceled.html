@@ -1,0 +1,31 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break"  tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search">
+	<div class="cen">消息</div>
+	<div class="search">
+		<div class="g_text">
+			<input type="text">
+		</div>
+		<i class="ser_btn"></i>
+	</div>
+</header>
+<nav class="same_nav">
+	<ul class="ul clearfix">
+		<!--<li>已发布</li>-->
+		<!--<li>草稿箱</li>-->
+		<li  class="cur">已撤销</li>
+	</ul>
+</nav>
+<div class="showPageText">
+	<div class="tit">{{=it.title}}</div>
+	<div class="tig">{{=it.add_time}}</div>
+	<div class="con">{{=it.content}}
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>公告来源：{{=it.source}}</p>
+	</div>
+	<div class="dis_box">
+	<div><button class="btn_gray" tap-event="restore_publicMessage" params='{"id":"{{=it.id}}"}' permission="announcement.return" >还原</button></div>
+
+	</div>
+</div>

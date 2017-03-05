@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<script type="text/javascript">
+    var exen = function(){
+        this.a = 'aaa';
+    }
+
+    exen.b = 'bbb';
+
+    exen.prototype.c = 'ccc';
+    var x = new exen;
+
+    console.log(x.a);
+    console.log(x.b);
+    console.log(x.c);
+</script>
+</body>
+</html>

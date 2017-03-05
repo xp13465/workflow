@@ -1,0 +1,26 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">附件资料</div>
+</header>
+<div class="filelist">
+	<dl>
+		<dt>附件资料</dt>
+		<dd class="clearfix">
+			{{ for(var k in it.attatch.img) { }}
+			{{ var extname = it.attatch.img[k].attachment_name;}}
+			{{extname = extname.split(".");}}
+			{{extname = extname[extname.length-1];}}
+			{{ if ($.inArray(extname , ['jpg','png','gif','jpeg','jpe','jfif'])>-1) { }}
+			<li tap-event="attaview" params="{url : '{{=it.attatch.img[k].attachment_url}}' }">
+				<img src="{{=it.attatch.img[k].attachment_url}}" alt=""> <p>{{=it.attatch.img[k].attachment_name}}</p>
+			</li>
+			{{ }else{ }}
+			<li>
+				<a href='{{=it.attatch.img[k].attachment_url}}'><img src="/Public/mobile/images/icon_word.png" alt=""></a> <p>{{=it.attatch.img[k].attachment_name}}</p>
+			</li>
+			{{ } }}
+			{{  } }}
+		</dd>
+	</dl>
+</div>

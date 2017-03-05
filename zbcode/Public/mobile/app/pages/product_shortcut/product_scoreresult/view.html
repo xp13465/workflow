@@ -1,0 +1,23 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">评分结果</div>
+</header>
+<div class="tablelist">
+	{{ for(var k in it.scoreResult) { }}
+	<dl>
+		<dt>
+			<span class="tit">[{{=it.scoreResult[k].department_name}}]评分结果</span>
+			<span class="fr"></span>
+		</dt>
+		<dd>评分类型 <span class="fr">{{ if(it.scoreResult[k].result[0].status==1){ }}通过{{ }else if(it.scoreResult[k].result[0].status==2){ }}不通过{{ }else if(it.scoreResult[k].result[0].status==3){ }}暂观望 {{ } }}</span></dd>
+		<dd>评分理由 <span class="fr">{{=it.scoreResult[k].result[0].reason}}</span></dd>
+		{{ for(var j in it.scoreResult[k].scoreList) { }}
+		<dd>
+			{{=it.scoreResult[k].scoreList[j].group_name}}
+			<span class="fr">{{=it.scoreResult[k].scoreList[j].score}}</span>
+		</dd>
+		{{ } }}
+	</dl>
+	{{ } }}
+</div>

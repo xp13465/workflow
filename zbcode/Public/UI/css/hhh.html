@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <style type="text/css">
+        .my-li-a-transparent{-webkit-opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: .5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);}
+        .my-li-a-trans2{-webkit-opacity: 0.2;-moz-opacity: 0.2;-khtml-opacity: 0.2;opacity: .2;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=20);}
+
+        #table-hover-ganying-div{position: fixed;width:300px;height:1000px;top:0px;right:0px;}
+
+        #table-logo{
+            position: fixed;
+            width:388px;height:175px;
+            background-image: url(./bars/table-logo.png)!important;
+        }
+
+        #main-message-box{
+            position: fixed;
+            right :10px;
+            top : 20px;
+        }
+
+        .panel-hide-show-btn{
+            display:none;
+            -webkit-border-radius:8px 0 0 8px;
+            -moz-border-radius:8px 0 0 8px;
+            border-radius: 8px 0 0 8px;
+            position: absolute;width:100%;height:100%;padding:10px;left:-30px;top:-10px;
+            padding-left:30px;
+/*            background-color: rgba(60, 132, 198, 0.8);
+            border-top-color: #8ba2c1;
+            border-right-color: #5890bf;
+            border-bottom-color: #4f93ca;
+            border-left-color: #768fa5;
+            -webkit-box-shadow: rgba(66, 140, 240, 0.5) 0px 5px 8px;
+            -moz-box-shadow: rgba(66, 140, 240, 0.5) 0px 10px 16px;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(28, 91, 155, 0.8)), to(rgba(108, 191, 255, .9)));
+            background-image: -moz-linear-gradient(rgba(28, 91, 155, 0.8) 0%, rgba(108, 191, 255, .9)90%);
+*/
+            background:#1f2431;
+            border : 1px solid #ccc;
+        }
+        .panel-hide-show-btn .hs-btn-a{
+            position:absolute;width:30px;height:100%;display:block;
+            left:0px;top:50%;text-align: center;
+            text-decoration:none;
+            color:#fff;font-weight:bold;
+        }
+        .panel-hide-show-btn .hs-btn-a:hover{
+        }
+
+        .message-box{
+            position: relative;
+            z-index:100;
+            width: 220px;
+            background : #FFFFFF;
+            box-shadow: rgb(136, 136, 136) 0px 0px 6px;
+            -webkit-border-radius:4px;
+            -moz-border-radius:4px;
+            border-radius: 4px;
+            overflow:hidden;
+            border-bottom:8px solid #fff;
+            margin-bottom:10px;
+        }
+        .message-box .message-box-title{height:35px;position:relative;color:#777;}
+        .message-box .message-box-title .myli{display:inline-block;height:35px;}
+        .message-box .message-box-title .message-box-title-icon{
+            height:30px;width:30px;margin-left:5px;
+            background-image:url(./bars/sm-btns.png);
+            background-position: -19px -19px;
+        }
+        .message-box .message-box-title .work-table{
+            height:30px;width:30px;margin-left:5px;
+            background-image:url(./bars/sm-btns.png);
+            background-position: -19px -47px;
+        }
+        .message-box .message-box-title .message-box-title-txt{position:relative;top:-10px;left:-5px;font-size:12px;font-weight:bold;}
+        .message-box .message-box-title .message-box-title-more{position:relative;top:5px;width:55px;height:21px;float:right;background-image:url(./bars/sm-btns.png);background-position: -55px -51px;}
+        .message-box .message-box-title .message-box-title-more:hover{background-image:url(./bars/sm-btns.png);background-position: -55px -26px;cursor:hand;}
+        .message-box .message-box-title .message-box-title-close{position:relative;float:right;width:25px;height:21px;top:2px;background-image:url(./bars/sm-btns.png);background-position: -96px -80px;}
+
+        .message-box .message-box-content .message-box-content-ls{position: relative;min-height:50px;hoverflow:hidden;font-size:12px;border-bottom: 1px dashed #999;color:#999;}
+        .message-box .message-box-content .message-box-content-ls:hover{color:#333;}
+        .message-box .message-box-content .message-box-content-ls:hover .message-box-content-ls-checkbtn{background:red;}
+        .message-box .message-box-content .message-box-content-ls .myli{display:inline-block;line-height:25px;}
+        .message-box .message-box-content .message-box-content-ls .message-box-content-ls-checkbtn{position: absolute;left:0px;top:0px;min-height:50px;width:30px;background:#DBDBDB;}
+        .message-box .message-box-content .message-box-content-ls .message-box-content-ls-content{position: relative;left:35px;z-inde:10;text-align:left;min-height:100%;}
+
+        .message-box .message-box-content .message-box-content-ls .message-box-content-ls-content-li{display:block;line-height:20px;}
+        .message-box .message-box-content .message-box-content-ls .text{font-size:15px;line-height:30px;font-weight:bold;}
+        .message-box .message-box-content .message-box-content-ls .myli-a{position:absolute;left:0px;top:0px;width:100%;height:100%;text-indent: -9999em;display:block;}
+        .message-box .message-box-content .message-box-content-ls .myli-a:hover{z-index:5;background:#000;}
+    </style>
+</head>
+<body style="background:cornflowerblue;">
+
+<div id="table-logo"></div>
+<div id="table-hover-ganying-div">
+<div id="main-message-box">
+    <div class="panel-hide-show-btn my-li-a-trans2">
+        <a href="javascript:;"class="hs-btn-a">&gt;</a>
+    </div>
+
+    <div id="user-message-box"  class="message-box">
+        <div class="message-box-title">
+            <span class="myli message-box-title-icon"></span>
+            <span class="myli message-box-title-txt">最新公告</span>
+            <a href="javascript:;" class="myli message-box-title-close"></a>
+            <a href="javascript:;" class="myli message-box-title-more" title="查看更多"></a>
+        </div>
+        <div class="message-box-content">
+            <div class="message-box-content-ls">
+                <span class="myli message-box-content-ls-checkbtn">&nbsp;</span>
+                <div class="myli message-box-content-ls-content">
+                    <span class="message-box-content-ls-content-li tit">周日&nbsp;2015年11月29日</span>
+                    <span class="message-box-content-ls-content-li text">产品上线通知</span>
+                </div>
+                <a href="javascript:;" class="myli-a my-li-a-transparent"></a>
+            </div>
+
+            <div class="message-box-content-ls">
+                <span class="myli message-box-content-ls-checkbtn">&nbsp;</span>
+                <div class="myli message-box-content-ls-content">
+                    <span class="message-box-content-ls-content-li tit">周日&nbsp;2015年11月29日</span>
+                    <span class="message-box-content-ls-content-li text">产品上线通知</span>
+                </div>
+                <a href="javascript:;" class="myli-a my-li-a-transparent"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="user-worktable-box" class="message-box">
+        <div class="message-box-title">
+            <span class="myli message-box-title-icon work-table"></span>
+            <span class="myli message-box-title-txt">待办事项</span>
+            <a href="javascript:;" class="myli message-box-title-close"></a>
+            <a href="javascript:;" class="myli message-box-title-more"></a>
+        </div>
+        <div class="message-box-content">
+            <div class="message-box-content-ls">
+                <span class="myli message-box-content-ls-checkbtn">&nbsp;</span>
+                <div class="myli message-box-content-ls-content">
+                    <span class="message-box-content-ls-content-li tit">周日&nbsp;2015年11月29日</span>
+                    <span class="message-box-content-ls-content-li text">产品上线通知</span>
+                </div>
+                <a href="javascript:;" class="myli-a my-li-a-transparent"></a>
+            </div>
+
+            <div class="message-box-content-ls">
+                <span class="myli message-box-content-ls-checkbtn">&nbsp;</span>
+                <div class="myli message-box-content-ls-content">
+                    <span class="message-box-content-ls-content-li tit">周日&nbsp;2015年11月29日</span>
+                    <span class="message-box-content-ls-content-li text">产品上线通知</span>
+                </div>
+                <a href="javascript:;" class="myli-a my-li-a-transparent"></a>
+            </div>
+
+            <div class="message-box-content-ls">
+                <span class="myli message-box-content-ls-checkbtn">&nbsp;</span>
+                <div class="myli message-box-content-ls-content">
+                    <span class="message-box-content-ls-content-li tit">周日&nbsp;2015年11月29日</span>
+                    <span class="message-box-content-ls-content-li text">产品上线通知</span>
+                </div>
+                <a href="javascript:;" class="myli-a my-li-a-transparent"></a>
+            </div>
+
+            <div class="message-box-content-ls">
+                <span class="myli message-box-content-ls-checkbtn">&nbsp;</span>
+                <div class="myli message-box-content-ls-content">
+                    <span class="message-box-content-ls-content-li tit">周日&nbsp;2015年11月29日</span>
+                    <span class="message-box-content-ls-content-li text">产品上线通知</span>
+                </div>
+                <a href="javascript:;" class="myli-a my-li-a-transparent"></a>
+            </div>
+
+            <div class="message-box-content-ls">
+                <span class="myli message-box-content-ls-checkbtn">&nbsp;</span>
+                <div class="myli message-box-content-ls-content">
+                    <span class="message-box-content-ls-content-li tit">周日&nbsp;2015年11月29日</span>
+                    <span class="message-box-content-ls-content-li text">产品上线通知</span>
+                </div>
+                <a href="javascript:;" class="myli-a my-li-a-transparent"></a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+<script type="text/javascript">
+(function(){
+    var screenHeight = $(window).height();
+    var screenWidth = $(window).width();
+    var t = $("#main-message-box").mouseenter(function(e){
+        //t.find(".panel-hide-show-btn").width(1000).show(150);
+    }).mouseleave(function(e){
+        //t.find(".panel-hide-show-btn").hide(50);
+    });
+    var t1 = $("#table-hover-ganying-div").mouseenter(function(e){
+        $("#main-message-box .panel-hide-show-btn").width(1000).show(150);
+    }).mouseleave(function(e){
+        $("#main-message-box .panel-hide-show-btn").hide(50);
+    });
+
+    $("#table-logo").css('left', Math.round((screenWidth-388)/2)+"px");
+    $("#table-logo").css('top', Math.round((screenHeight-175)/3)+"px");
+    $(window).resize(function(){
+        var screenHeight = $(window).height();
+        var screenWidth = $(window).width();
+
+        $("#table-logo").css('left', Math.round((screenWidth-388)/2)+"px");
+        $("#table-logo").css('top', Math.round((screenHeight-175)/3)+"px");
+    });
+
+    $("#main-message-box .panel-hide-show-btn .hs-btn-a").click(function(e){
+        var screenHeight = $(window).height();
+        var screenWidth = $(window).width();
+        var mewidth = $("#main-message-box").width();
+        var btn = $("#main-message-box .panel-hide-show-btn .hs-btn-a");
+
+        if(!($("#main-message-box").hasClass('hidebar'))){
+            $("#main-message-box").addClass('hidebar').animate({
+                right : -(mewidth)+"px"
+            }, 100);
+            btn.html("&lt;");
+        }else{
+            $("#main-message-box").animate({
+                right : "10px"
+            }, 100).removeClass('hidebar').show();
+            btn.html("&gt;");
+        }
+    });
+})();
+</script>
+</body>
+</html>

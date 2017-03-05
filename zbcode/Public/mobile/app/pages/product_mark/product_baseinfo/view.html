@@ -1,0 +1,61 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">产品基本详情</div>
+</header>
+<div class="infolist">
+	<ul>
+		<li>
+			产品全称
+			<span class="fr">
+				{{=it.baseInfo.base.full_name}}
+			</span>
+		</li>
+		<li>
+			产品简称
+			<span class="fr">
+				{{=it.baseInfo.base.short_name}}
+			</span>
+		</li>
+		<li>
+			渠道费用
+			<span class="fr red">
+				{{=it.feeInfo.channel_fee.channel_fee}}%
+			</span>
+		</li>
+		{{ if(it.baseInfo.base.contacter) { }}
+		<li>
+			联系人
+			<span class="fr">
+				{{=it.baseInfo.base.contacter}}
+			</span>
+		</li>
+		{{ } }}
+		{{ if(it.baseInfo.base.contact_tel) { }}
+		<li>
+			联系人电话
+			<span class="fr">
+				{{=it.baseInfo.base.contact_tel}}
+			</span>
+		</li>
+		{{ } }}
+		<li>
+			录入人
+			<span class="fr">
+				{{=it.baseInfo.base.creater}}
+			</span>
+		</li>
+		<li>
+			产品周期
+			<span class="fr">
+				{{=it.baseInfo.base.term}} 天
+			</span>
+		</li>
+		<li>
+			下架时间
+			<span class="fr">
+				{{=it.baseInfo.base.end_time}}
+			</span>
+		</li>		
+	</ul>
+</div>

@@ -1,0 +1,68 @@
+ <script sid="itemtemplate" type="text/x-dot-template">
+    {{~it.array:value:index}}
+    <div>{{= index+1 }}{{= value }}!</div>
+    {{~}}
+</script>
+
+<div class="title">
+    <img src="__MOBILE_PATH__/images/title.png" alt="">
+</div>
+
+<div class="con">
+    <div class="bg">
+        {{ var length =0 ;}}
+        {{ for(var z in it) { }}
+            {{ if(Object.prototype.toString.call(it[z]) == '[object Object]'){}}
+                {{ length++; }}
+            {{ } }}
+        {{ } }}
+        {{ var i =0 ;}}
+        {{ for(var k in it) { }}
+            {{ if(Object.prototype.toString.call(it[k]) != '[object Object]'){}}
+                {{break; }}
+            {{ } }}
+            {{ i++; }}
+            {{ if( i%4 == 1){ }}
+                <ul>
+            {{ } }}
+
+            {{ if(length === i && ( length%4 > 0 )){ }}
+                    {{ if(length === i){}}
+                        <li tap-event="click_deskmenu" params="{'module':'{{=it[k].module}}' , 'key': '{{=k}}'}">
+                            <img src="__MOBILE_PATH__/images/{{=it[k]['module']}}.png" alt="">
+                            <p>{{=it[k].name}}</p>
+                        </li>
+                    {{ } }}
+                    {{  for(;i<=10000;i++) { }}
+                        <li></li>
+                        {{ if( (i+1)%4 == 0 ){ }}
+                            {{break; }}
+                        {{ } }}
+                    {{ } }}
+            {{ }else{ }}
+                    <li tap-event="click_deskmenu" params="{'module':'{{=it[k].module}}' , 'key': '{{=k}}'}">
+                        <img src="__MOBILE_PATH__/images/{{=it[k]['module']}}.png" alt="">
+                        <p>{{=it[k].name}}</p>
+                    </li>
+            {{ } }}
+            {{ if(i%4 == 0 && i>0){ }}
+                </ul>
+            {{ } }}
+        {{ } }}
+    </div>
+</div>
+<!--
+<div class="point">
+    <ul class="clearfix">
+        <span class="hover">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </ul>
+</div>
+-->
+<div class="footer">
+    <p>V1.0</p>
+    <p><img src="__MOBILE_PATH__/images/footer.png" alt=""></p>
+    <p>版权所有© 2006~2015  沪ICP备06060176号</p>
+</div>

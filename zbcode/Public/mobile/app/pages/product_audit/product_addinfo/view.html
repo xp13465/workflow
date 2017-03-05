@@ -1,0 +1,17 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">新增信息</div>
+</header>
+<div class="infolist">
+	<ul>
+		{{ for (var i = 0, l = it.selfInfo.length; i < l; i++) { }}
+			<li>
+				{{=it.selfInfo[i].field_name}}
+				<span class="fr">
+					{{=it.selfInfo[i].field_value}}
+				</span>
+			</li>
+		{{ } }}
+	</ul>
+</div>

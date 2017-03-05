@@ -1,0 +1,418 @@
+[ 2016-01-05T15:56:30+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-05T15:56:30+08:00 ] 127.0.0.1 /Admin/common/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-05T15:56:40+08:00 ] 127.0.0.1 /Admin/common/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `zb_user` WHERE ( email = 'zb@zb.com' and password = 'e10adc3949ba59abbe56e057f20f883e' and status = 1 ) LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT * FROM `zb_user` WHERE `email` = 'zb@zb.com' LIMIT 1   [ RunTime:0.0180s ]
+
+[ 2016-01-05T15:56:40+08:00 ] 127.0.0.1 /Admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-01-05T15:56:57+08:00 ] 127.0.0.1 /admin/system/getproductrateList?_dc=1451980617375
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:getproductrateList
+
+[ 2016-01-05T16:00:15+08:00 ] 127.0.0.1 /admin/system/getaddressbookList?_dc=1451980815086
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:getaddressbookList
+
+[ 2016-01-05T16:00:18+08:00 ] 127.0.0.1 /admin/system/getproductrateList?_dc=1451980818066
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:getproductrateList
+
+[ 2016-01-05T16:00:21+08:00 ] 127.0.0.1 /admin/system/getRoleList?_dc=1451980821517
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status = 1 ) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-05T16:00:24+08:00 ] 127.0.0.1 /admin/system/getRoleInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `zb_auth_role` WHERE (  id = 63 and  status = 1 ) LIMIT 1   [ RunTime:0.0290s ]
+
+[ 2016-01-05T16:03:04+08:00 ] 127.0.0.1 /admin/system/getOrganizationList?_dc=1451980984643
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_organization` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_organization` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `organization_id`,`organization_name`,`organization_full_name`,`status`,`update_time` FROM `zb_organization` WHERE (  status = 1 ) ORDER BY organization_id desc LIMIT 0,25   [ RunTime:0.0020s ]
+
+[ 2016-01-05T16:03:06+08:00 ] 127.0.0.1 /admin/system/getdepartmentList?_dc=1451980986416
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_department` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `zb_department` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_department as d WHERE (  d.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_department` [ RunTime:0.0050s ]
+SQL: SELECT d.*,o.organization_name,dp.name as firstdepartment_name FROM zb_department as d left JOIN zb_organization as o ON d.organization_id = o.organization_id left JOIN zb_department as dp ON d.pid = dp.id  WHERE (  d.status = 1 ) ORDER BY id desc  [ RunTime:0.0030s ]
+
+[ 2016-01-05T16:03:08+08:00 ] 127.0.0.1 /admin/system/getOrganizationList?_dc=1451980988476
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_organization` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_organization` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `organization_id`,`organization_name`,`organization_full_name`,`status`,`update_time` FROM `zb_organization` WHERE (  status = 1 ) ORDER BY organization_id desc LIMIT 0,25   [ RunTime:0.0120s ]
+
+[ 2016-01-05T16:03:09+08:00 ] 127.0.0.1 /admin/system/getdepartmentList?_dc=1451980989494
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_department` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `zb_department` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_department as d WHERE (  d.status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `zb_department` [ RunTime:0.0100s ]
+SQL: SELECT d.*,o.organization_name,dp.name as firstdepartment_name FROM zb_department as d left JOIN zb_organization as o ON d.organization_id = o.organization_id left JOIN zb_department as dp ON d.pid = dp.id  WHERE (  d.status = 1 ) ORDER BY id desc  [ RunTime:0.0030s ]
+
+[ 2016-01-05T16:03:10+08:00 ] 127.0.0.1 /admin/system/getpositionList?_dc=1451980990291
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_position` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_position` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT * FROM `zb_position` WHERE (  status = 1 ) ORDER BY id desc  [ RunTime:0.0090s ]
+
+[ 2016-01-05T16:03:11+08:00 ] 127.0.0.1 /admin/user/getUserList?_dc=1451980990986
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0140s ]
+NOTIC: [8] Undefined variable: where D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\UserController.class.php 第 74 行.
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: where D:\WEB\192.168.1.126\zbcode\Application\Admin\Controller\UserController.class.php 第 84 行.
+SQL: SHOW COLUMNS FROM `zb_user` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM zb_user as user INNER JOIN zb_department ON user.department_id = zb_department.id INNER JOIN zb_position ON user.position_id = zb_position.id  LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT sub.*,position.name as leader_position_name,dp.name as firstdepartmentname FROM ( SELECT user.*,zb_department.name as subdepartmentname,zb_department.pid as department_pid,zb_position.pid as leader_position_id,zb_position.name as position_name,og.organization_name FROM zb_user as user INNER JOIN zb_department ON user.department_id = zb_department.id INNER JOIN zb_position ON user.position_id = zb_position.id INNER JOIN zb_organization as og ON og.organization_id = user.organization_id  ORDER BY add_time desc LIMIT 0,25   ) as sub LEFT JOIN zb_position as position ON sub.leader_position_id = position.id LEFT JOIN zb_department as dp ON dp.id = sub.department_pid   [ RunTime:0.0260s ]
+
+[ 2016-01-05T16:03:11+08:00 ] 127.0.0.1 /admin/system/getRoleList?_dc=1451980991391
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status = 1 ) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0050s ]
+
+[ 2016-01-05T16:03:13+08:00 ] 127.0.0.1 /admin/system/getNodeList?_dc=1451980993553
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_node` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`pid`,`name`,`module`,`iconCls`,`group`,`type`,`sort`,`status`,`update_time` FROM `zb_auth_node` WHERE (  1=1 ) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0040s ]
+
+[ 2016-01-05T16:04:06+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 117 LIMIT 1   [ RunTime:0.0100s ]
+
+[ 2016-01-05T16:04:14+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 117 LIMIT 1   [ RunTime:0.0650s ]
+
+[ 2016-01-05T16:04:17+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.1060s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 117 LIMIT 1   [ RunTime:0.1030s ]
+
+[ 2016-01-05T16:04:19+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 117 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2016-01-05T16:04:22+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 117 LIMIT 1   [ RunTime:0.0550s ]
+
+[ 2016-01-05T16:04:30+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 116 LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-05T16:04:35+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 115 LIMIT 1   [ RunTime:0.0190s ]
+
+[ 2016-01-05T16:05:33+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0030s ]
+
+[ 2016-01-05T16:05:35+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 110 LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-05T16:05:37+08:00 ] 127.0.0.1 /admin/system/getNodeInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_node` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `zb_auth_node` WHERE `id` = 116 LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-05T16:05:39+08:00 ] 127.0.0.1 /admin/system/getRoleList?_dc=1451981139809
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0160s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status = 1 ) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0130s ]
+
+[ 2016-01-05T16:05:43+08:00 ] 127.0.0.1 /admin/system/getRoleInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `zb_auth_role` WHERE (  id = 38 and  status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-05T16:05:51+08:00 ] 127.0.0.1 /admin/system/getRoleInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `zb_auth_role` WHERE (  id = 39 and  status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-05T16:07:50+08:00 ] 127.0.0.1 /admin/system/getRoleList?_dc=1451981270411
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status = 1 ) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0040s ]
+
+[ 2016-01-05T16:07:51+08:00 ] 127.0.0.1 /admin/system/getRoleList?_dc=1451981271053
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status = 1 ) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-05T16:07:52+08:00 ] 127.0.0.1 /admin/system/getRoleList?_dc=1451981271984
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status = 1 ) ORDER BY id desc LIMIT 50,25   [ RunTime:0.0030s ]
+
+[ 2016-01-05T16:07:53+08:00 ] 127.0.0.1 /admin/system/getRoleList?_dc=1451981273607
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status = 1 ) ORDER BY id desc LIMIT 25,25   [ RunTime:0.0200s ]
+
+[ 2016-01-05T16:07:54+08:00 ] 127.0.0.1 /admin/system/getRoleList?_dc=1451981274291
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `zb_auth_role` WHERE (  status = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title`,`remark`,`status`,`sort`,`update_time` FROM `zb_auth_role` WHERE (  status = 1 ) ORDER BY id desc LIMIT 0,25   [ RunTime:0.0030s ]
+
+[ 2016-01-05T16:08:06+08:00 ] 127.0.0.1 /admin/system/getRoleInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `zb_auth_role` WHERE (  id = 56 and  status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-05T16:08:21+08:00 ] 127.0.0.1 /admin/system/getRoleInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `zb_auth_role` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `zb_auth_role` WHERE (  id = 55 and  status = 1 ) LIMIT 1   [ RunTime:0.0020s ]
+
+[ 2016-01-05T17:33:18+08:00 ] 127.0.0.1 /admin/system/getaddressbookList?_dc=1451986398920
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:getaddressbookList
+

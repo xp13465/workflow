@@ -1,0 +1,72 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">产品详情</div>
+</header>
+<div class="meslist">
+	<ul class="ul">
+		<li>
+			<dl>
+
+				<dt class="number">
+					<i class="i_one">1</i>
+				</dt>
+				<dt class="product">
+				<p class="p1">
+				<div>{{=it.baseInfo.base.full_name}}</div>
+				</p>
+				<p class="p2">{{=it.baseInfo.base.add_time}}</p>
+				</dt>
+				<dt class="cursor">
+				<p class="p1"><i class="img_rt"></i>推荐人</p>
+				<p class="p2">{{=it.baseInfo.base.creater}}</p>
+				</dt>
+				<dt class="setting">
+					<span>{{ if(it.baseInfo.base.status==1){ }}未完成 {{ } else if(it.baseInfo.base.status==2){ }}待评分{{ }else if(it.baseInfo.base.status==3){ }}合同待上传{{ }else if(it.baseInfo.base.status==4){ }}合同待审核{{ }else if(it.baseInfo.base.status==5){ }}产品待审核{{ }else if(it.baseInfo.base.status==6){ }}销售中{{ }else if(it.baseInfo.base.status==7){ }}已过期{{ }else if(it.baseInfo.base.status==8){ }}被撤销{{ }else if(it.baseInfo.base.status==9){ }}被终止{{ }else if(it.baseInfo.base.status==10){ }}暂下架{{ }else if(it.baseInfo.base.status==11){ }}已下架{{ }else if(it.baseInfo.base.status==99){ }}预录{{ } }}</span>
+				</dt>
+			</dl>
+		</li>
+	</ul>
+	<ul class="ul_list">
+		<li tap-event = "view_baseinfo" params = '{"id":"{{=it.baseInfo.base.id}}"}'>
+			<i class="icon_xx"></i>
+			<span class="text">基本信息</span>
+			<i class="icon_right"></i>
+		</li>
+		<li tap-event = "view_addinfo" params = '{"id":"{{=it.baseInfo.base.id}}"}'>
+			<i class="icon_xx_02"></i>
+			<span class="text">新增信息</span>
+			<i class="icon_right"></i>
+		</li>
+		<li tap-event = "view_scoreinfo" params = '{"id":"{{=it.baseInfo.base.id}}"}'>
+			<i class="icon_pf"></i>
+			<span class="text">评分表</span>
+			<i class="icon_right"></i>
+		</li>
+		{{ if(typeof(it.scoreResult.length)=='undefined'){ }}
+		<li tap-event = "view_scoreresult" params = '{"id":"{{=it.baseInfo.base.id}}"}'>
+			<i class="icon_jg"></i>
+			<span class="text">评分结果</span>
+			<i class="icon_right"></i>
+		</li>
+		{{ } }}
+		{{ if(it.feeInfo.fee.length > 0){ }}
+		<li tap-event = "view_rate" params = '{"id":"{{=it.baseInfo.base.id}}"}'>
+			<i class="icon_fj"></i>
+			<span class="text">费率查看</span>
+			<i class="icon_right"></i>
+		</li>
+		{{ } }}
+		<li tap-event = "view_attachinfo" params = '{"id":"{{=it.baseInfo.base.id}}"}'>
+			<i class="icon_ht"></i>
+			<span class="text">附件资料</span>
+			<i class="icon_right"></i>
+		</li>
+		<li tap-event = "view_docinfo" params = '{"id":"{{=it.baseInfo.base.id}}"}'>
+			<i class="icon_ht"></i>
+			<span class="text">合同资料</span>
+			<i class="icon_right"></i>
+		</li>
+	</ul>
+
+</div>

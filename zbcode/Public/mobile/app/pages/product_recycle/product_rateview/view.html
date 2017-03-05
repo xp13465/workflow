@@ -1,0 +1,22 @@
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+	<div class="cen">评分结果</div>
+</header>
+<div class="tablelist">
+
+	<dl>
+		<dt>
+			<span class="tit">渠道费率</span>
+			<span class="fr">{{=it.feeInfo.channel_fee.channel_fee}}</span>
+		</dt>
+		{{ for(var j in it.feeInfo.fee) { }}
+		<dd>
+			{{=it.feeInfo.fee[j].field_name}}
+			<span class="fr">{{=it.feeInfo.fee[j].field_value}} {{ if(it.feeInfo.fee[j].field_value){ }}({{=it.feeInfo.fee[j].result}}%){{ } }}</span>
+		</dd>
+		{{ } }}
+
+	</dl>
+
+</div>

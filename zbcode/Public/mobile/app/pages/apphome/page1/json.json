@@ -1,0 +1,4 @@
+{
+  "name":"Jake","age":31,"interests":["basketball","hockey","photography"],
+  "contact":{"email":"jake@xyz.com","phone":"999999999"}
+}

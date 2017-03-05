@@ -1,0 +1,466 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+a:hover { text-decoration:underline; }
+img { border:none; }
+ol,ul,li { list-style:none; }
+input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
+table { border-collapse:collapse; }
+html {overflow-y: scroll;}
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+
+/*以下为开始按钮风格定义*/
+.my-start-button{}
+/*以下为开始按钮背景设置*/
+.ux-start-button-icon{background-image:url(../resources/images/taskbar/sencha.gif)!important;background-color:transparent}
+/*时钟显示控件样式*/
+.my-trayclock{}
+.my-trayclock:hover{font-weight:bold;}
+/*桌面图标样式定义*/
+.my-ux-desktop-shortcut{}
+/*底部任务栏样式*/
+.my-ux-taskbar{
+    background : none;
+}
+.x-column-header-checkbox .x-column-header-inner {  /*grid头部check栏*/
+    padding: 5px 4px 4px 3px;
+}
+
+#loading-mask{display:none;width:100%;height:100%;background:#669CE4;-webkit-opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: .5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);}
+
+.my-transparent{-webkit-opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: .5;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);}
+.my-no-transparent{-webkit-opacity: 1;-moz-opacity:1;-khtml-opacity: 1;opacity:1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);}
+
+.my-startbtn-icon{background-image:url(../resources/images/magnify.png);}
+.my-startbtn-hover{border:3px solid #fff;}
+.my-startbtn-cls{font-size:22px;}
+
+.my-taskbar-bodycls{height:45px;background-color:#000;padding:4px;padding-left:8px;}
+.my-desktop-bodycls{
+	background:url(../resources/images/wallpapers/desk.jpg) no-repeat ;
+	background-size: 100% 100%;
+}
+.my-desktop-bodycls2{background: url(./bars/table-logo.png) center center no-repeat !important;}
+
+.my-startmenu-bodycls{background:#000;padding:10px 10px 10px 0px;}
+.my-startmenu-panels{}
+
+.x-view-selector {
+    position: absolute;
+    border: 1px solid #3399BB;
+}
+.my-desknew-dataview-cls{
+    background:transparent;
+    -webkit-column-width:112px;
+    -moz-column-width:112px;
+    writing-mode: tb-lr;
+    *white-space:nowrap;
+    idth:100px;
+    -webkit-column-gap:0px;
+    -moz-column-gap:0px;
+    writing-mode: tb-lr;
+}
+/*桌面图标样式 */
+.ux-desktop-shortcut {
+    cursor: pointer;
+    text-align: center;
+    padding:5px 8px 5px 8px;
+    margin: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    width: 100px;
+    height:115px;
+    overflow : hidden;
+    font-size : 16px;
+    text-shadow: black 1px 1px 0px;
+    display : inline-block;
+    z-index:100;
+    *display:inline;
+    writing-mode: lr-tb;
+    *white-space:nowrap;
+}
+
+.ux-desktop-shortcut-icon {
+    width: 64px;
+    height: 64px;
+    margin : 2px 10px 2px 10px;
+    background-color: transparent;
+    background-repeat: no-repeat
+}
+
+.ux-desktop-shortcut-text {
+    font-size-adjust:none;
+    font: normal 12px tahoma, arial, verdana, sans-serif;
+    text-decoration: none;
+    padding-top: 5px;
+    color: white
+}
+
+.x-view-over .ux-desktop-shortcut-text {
+    text-shadow: black 2px 2px 1px;
+}
+
+.my-x-view-over{
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+    border-radius: 4px;
+   border: 1px solid #ccc;
+   position: relative;
+   font-family: Lucida Sans, Helvetica, sans-serif;
+   font-weight: 800;
+   color: #fff;
+}
+.my-x-view-over-shuijing{
+  background-color: rgba(60, 132, 198, 0.8);
+  border-top-color: #8ba2c1;
+  border-right-color: #5890bf;
+  border-bottom-color: #4f93ca;
+  border-left-color: #768fa5;
+  -webkit-box-shadow: rgba(66, 140, 240, 0.5) 0px 5px 8px;
+  -moz-box-shadow: rgba(66, 140, 240, 0.5) 0px 10px 16px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from(rgba(28, 91, 155, 0.8)), to(rgba(108, 191, 255, .9)));
+  background-image: -moz-linear-gradient(rgba(28, 91, 155, 0.8) 0%, rgba(108, 191, 255, .9)90%);
+}
+
+.accordion-shortcut {
+    background-image: url(../resources/images/im48x48.png)
+}
+
+.cpu-shortcut {
+    background-image: url(../resources/images/statusLarge.png)
+}
+
+.grid-shortcut{
+    background-image: url(../resources/images/grid48x48.png)
+}
+
+
+.user-node-icon{
+    background-image: url(icons/64x64/notebook.png)
+}
+
+.user-node-icon{
+    background-image: url(icons/64x64/notebook.png)
+}
+.process-table-icon{background-image:url(icons/64x64/worktable.png)}
+.process-pinfen-icon{background-image:url(icons/64x64/propinfen.png)}
+.yejigenz-icon{background-image:url(icons/64x64/genzhong.png)}
+.fee-icon{background-image:url(icons/64x64/feeguanli.png)}
+.process-shenhe-icon{background-image:url(icons/64x64/prodaishenhe.png)}
+.process-status-icon{background-image:url(icons/64x64/chanpinbianjie.png)}
+.notebook-icon{background-image:url(icons/64x64/notebook.png)}
+.sysnotice-icon{background-image:url(icons/64x64/sysnotice.png)}
+.sys-set-icon{background-image:url(icons/64x64/xitongpeizhi.png)}
+.process-huishou-icon{background-image:url(icons/64x64/prohuishouzhan.png)}
+.xitongcanshu-icon{background-image:url(icons/64x64/systemgl.png)}
+.xiaoxitongzhi-icon{background-image:url(icons/64x64/message.png)}
+.proonline-icon{background-image:url(icons/64x64/proonline.png)}
+.accountaudit-icon{background-image:url(icons/64x64/accountaudit.png)}
+/*改变窗口title的默认风格*/
+.x-window-header-title-default{}
+.x-window-header-title-default>.x-title-text-default{padding-left:15px;}
+
+.process-table-icon-win{background-image:url(icons/32x32/worktable.png)}
+.process-pinfen-icon-win{background-image:url(icons/32x32/propinfen.png)}
+.yejigenz-icon-win{background-image:url(icons/32x32/genzhong.png)}
+.fee-icon-win{background-image:url(icons/32x32/feeguanli.png)}
+.process-shenhe-icon-win{background-image:url(icons/32x32/prodaishenhe.png)}
+.process-status-icon-win{background-image:url(icons/32x32/chanpinbianjie.png)}
+.notebook-icon-win{background-image:url(icons/32x32/notebook.png)}
+.sys-set-icon-win{background-image:url(icons/32x32/xitongpeizhi.png)}
+.process-huishou-icon-win{background-image:url(icons/32x32/prohuishouzhan.png)}
+.xitongcanshu-icon-win{background-image:url(icons/32x32/systemgl.png)}
+.xiaoxitongzhi-icon-win{background-image:url(icons/32x32/message.png)}
+.proonline-icon-win{background-image:url(icons/32x32/proonline.png)}
+.accountaudit-icon-win{background-image:url(icons/32x32/accountaudit.png)}
+.sysnotice-icon-win{background-image:url(icons/32x32/sysnotice.png)}
+.x-window-header-title-default>.x-title-icon-wrap-default>.x-title-icon-default{width:32px;height:32px;margin-right:15px;}
+
+.user-msg-wins{
+}
+.x-window-header-default-top{/*background:red;*/}
+
+.x-window-default   /*窗体的默认样式*/
+
+.notepad-shortcut {
+    background-image: url(../resources/images/notepadLarge.png);
+    width: 46px;
+    height: 46px
+}
+.fontcolor777{color:#777;}
+.nei-page-header-cls{background:red;}
+
+.my-panel-no-border{border-style:none}
+
+.button-qianyanse{background:#45BBFA;color:#555; cursor:hand ;}
+
+.summary-left-menu-bg{position: relative;width:100%;height:100%;overflow:hidden;background:#F5F5F5;color:#555;overflow-y:auto;}
+.summary-left-menu-bg .left-menu-div{position: relative;display:block;line-height:38px;padding:10px;min-height:38px;text-align:center;color:#555;text-decoration: none;border:1px solid #F5F5F5; }
+.summary-left-menu-bg .left-menu-div:hover{background:#6F737A;color:#FFFFFF;}
+.summary-left-menu-bg .menu-checked{background:#525B69;color:#FFFFFF;border:1px solid #343D4C; }
+.summary-left-menu-bg .left-menu-div .left-menu-icon{position: absolute;left:10px;top:15px;display:inline-block;width:32px;height:32px;margin-right:10px;}
+
+.grid-list-operation-btns{display:inline-block;padding:5px;   -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;background:#AEC7E1;text-decoration: none;color:#FFF;margin-right:5px;}
+.grid-list-operation-btns-disable{background:#ccc;}
+.x-form-trigger-wrap-default{border:none;border-bottom:1px solid #cecece;}
+.x-form-trigger-wrap-readonly-default{/*只读输入框 lable样式*/}
+.x-form-trigger-wrap-readonly{background:red;}
+.readonly-text-color{color:#dd882f;}
+
+.w169 {width: 169px;}
+#bottomCon {
+    position: fixed;
+    height: 50px;
+
+    bottom: 0px;
+    width: 100%;
+}
+#bottomCon .bg {
+    height: 100%;
+    background: #383838;
+    opacity: 0.6;
+}
+#bottomCon .bottom{
+    height: 100%;
+    position: absolute;
+    top: 0px;
+}
+#bottomCon .bottom .list {
+    height: 100%;
+    float: left;
+}
+#bottomCon .bottom .list li{
+    height: inherit;
+    float:left;
+    display: table;
+    color: #FFF;
+    border-right: 1px solid #616161;
+    cursor: pointer;
+    position: relative;
+}
+#bottomCon .bottom .list i.w32{
+    position: relative;
+    top:5px;
+    display:inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: bottom; 
+}
+#bottomCon .bottom .list i.w32 .btnText{
+    line-height:30px;
+}
+#bottomCon .startmenu{
+    position: relative;
+    display:inline-block;
+    top:5px;
+    margin:0 5px;
+    width:32px;
+    height:32px;
+    background-image: url(icons/startmenu.png);
+}
+#bottomCon .bottom .list i.w16 img{
+    width: 16px;
+    height: 16px;
+}
+#bottomCon .bottom .list img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+#bottomCon .bottom .list .span_l,#bottomCon .bottom .list .span_b {
+    display: table-cell;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+}
+#bottomCon .bottom .list .span_l{
+    padding:0 20px;
+
+}
+#bottomCon .bottom .list .span_b{
+    position: relative;
+    text-align: left;
+    width: 169px;
+
+}
+#bottomCon .bottom .list .span_s {
+    padding:0 20px;
+
+}
+#bottomCon .bottom .list .text {
+    display: inline-block;
+    overflow: hidden;
+    height: 16px;
+    margin-left: 20px;
+    max-width:70px;
+      top: 21px;
+    
+
+}
+#bottomCon .bottom .list .span_b .text{
+    position: absolute;
+} 
+#bottomCon .bottom .list .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+}
+#bottomCon .bottom .list .icon_small {
+    width: 25px;
+    height: 25px;
+}
+#bottomCon .bottom .list .icon_start {
+    background: url('../images/start.png') center center no-repeat;
+}
+#bottomCon .bottom .list .icon_01_32{
+    background: url('../images/icon_01.png') center center no-repeat;
+}
+#bottomCon .bottom .list .icon_01_25{
+    background: url('../images/icon_01.png') center center no-repeat;
+} 
+
+
+
+#bottomCon .bottom .list .top {
+    position: absolute;
+    top: -38px;
+    height: 36px;
+    line-height: 36px;
+    background: #2B2B2B;
+    border:1px solid #A5A5A5;
+    width: 170px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 12px;
+    text-indent: 20px;
+    left: -1px;
+    display: none;
+    cursor: auto;
+}
+#bottomCon .bottom .list .top img {
+    margin-right: 5px;
+}
+#bottomCon .bottom .list .hover .top {
+    display: inline-block;
+}
+#bottomCon .bottom .list .cur {
+    box-shadow: 1px 1px 10px #6A8BE6;
+    color: #D38231;
+    background:-webkit-gradient(linear, 0 0, 0 14%, from(#B9B9B9), to(#383838));
+    background:-moz-linear-gradient(linear, 0 0, 0 14%, from(#B9B9B9), to(#383838));
+}
+#bottomCon .bottom .list.cur .top {
+    display: none;
+}
+
+
+
+.hiddenmenu{display:none;}
+/* css common */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    *zoom: 1;
+}
+#startmenudiv {
+    background: #EFEFEF;
+    border: 1px solid #E0E0E0;
+    position: fixed;
+    bottom: 40px;
+    overflow: hidden;
+      z-index: 5000000;
+}
+#startmenudiv dt,
+#startmenudiv dd {
+    float: left;
+    width: 260px;
+    padding: 10px 0;
+    border-right: 1px solid #E2E2E2;
+}
+#startmenudiv dt .icon,
+#startmenudiv dd .icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+    display: inline-block;
+}
+#startmenudiv dt .jt,
+#startmenudiv dd .jt {
+    background: url('../jiantou.png') center center no-repeat;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: -33px;
+    top: 15px;
+}
+#startmenudiv dt a,
+#startmenudiv dd a {
+    height: 40px;
+    padding: 2px 0;
+    float: left;
+    width: 100%;
+    margin: 0px 10px;
+    line-height: 40px;
+    padding-left: 10px;
+    width: 240px;
+    border-radius: 5px;
+    position: relative;
+}
+#startmenudiv dt a:hover,
+#startmenudiv dd a:hover {
+    background: #FFF;
+}
+#startmenudiv dt .icon_01,
+#startmenudiv dd .icon_01 {
+    background: url('http://d.lanrentuku.com/down/png/1504/medialoot-round-social-icons/stumbleupon.png') 0 0 no-repeat;
+}
+
+.fileuploadfieldclass {background:#E6E6E6;}
+.backgroundhuise{background : #ddd;}
+.labletextcenter{font-size:18px;line-height:40px;}
+.lablelablename{text-align:center;font-size:16px;line-height:40px;}
+.lineheight40{line-height:40px;}
+.font-red-label-tip{color:red;}
+.font-blue-label-tip{color:#6FB02F;}
+
+
+
+.shua{
+  background-image: url(../images/shua.png);
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+  top: -5px;
+}
+.btn_is_view {
+position: absolute;
+  left: -32px;
+  top: 12px;
+  border-radius: 50%;
+  border: 1px solid #704CF4;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  text-align: center;
+  line-height: 22px;
+  font-style: normal;
+  color: #704CF4;
+}

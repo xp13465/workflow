@@ -1,0 +1,56 @@
+<template name="body" type="text/html">
+<header class="Mheader">
+	<img src="/Public/mobile/images/break.png" alt="" class="break"  tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search">
+	<div class="cen">消息</div>
+</header>
+<nav class="same_nav">
+	<ul class="ul clearfix">
+		<li status="1" tap-event = "gotoitem">最新公告</li>
+		<li status="2" class="cur">待办事项</li>
+	</ul>
+</nav>
+<div class="Mlist btnMlist">
+	<ul>
+		{{ for (var i = 0, l = it.items.length; i < l; i++) { }}
+		<li tap-event = "view_message_details"  params = "{'id':'{{=it.items[i].id}}'}">
+			<dl>
+				<dt class="number">
+					<i class="{{if (i==0){ }}i_one{{ }else if(i==1){ }}i_two{{ }else if (i==2){ }}i_three{{ }else{ }}{{ } }}">{{=i+1}}</i>
+				</dt>
+				<dt class="product">
+					<p class="p1 {{ if(it.items[i].is_view == 2){ }}dis{{ } }}">{{=it.items[i].title}}</p>
+					<p class="p2">{{=it.items[i].add_time}}</p>
+				</dt>
+				<!--<dt class="cursor">-->
+					<!--&lt;!&ndash;<p class="p1"><i class="img_rt"></i>推荐人</p>&ndash;&gt;-->
+					<!--&lt;!&ndash;<p class="p2">{{=it.items[i].creater}}</p>&ndash;&gt;-->
+				<!--</dt>-->
+				<!--<dt class="setting">-->
+					<!--<span>{{ if(it.items[i].status==0){ }}未读 {{ } else if(it.items[i].status==1){ }}已读{{ } }}</span>-->
+				<!--</dt>-->
+			</dl>
+		</li>
+		{{ } }}
+	</ul>
+	<div class="more" tap-event="loadmore"><button>点击加载更多</button></div>
+</div>
+</template>
+
+<template name="items" type="text/html">
+
+		{{ for (var i = 0, index=it.init_i,l = it.items.length; i < l; i++,index++) { }}
+		<li tap-event = "view_message_details"  params = "{'id':'{{=it.items[i].id}}'}">
+			<dl>
+				<dt class="number">
+					<i class="{{if (index==0){ }}i_one{{ }else if(index==1){ }}i_two{{ }else if (index==2){ }}i_three{{ }else{ }}{{ } }}">{{=index+1}}</i>
+				</dt>
+				<dt class="product">
+				<p class="p1 {{ if(it.items[i].is_view == 2){ }}dis{{ } }}">{{=it.items[i].title}}</p>
+				<p class="p2">{{=it.items[i].add_time}}</p>
+				</dt>
+			</dl>
+		</li>
+		{{ } }}
+
+</template>

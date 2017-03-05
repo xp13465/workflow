@@ -1,0 +1,64 @@
+<template name="body" type="text/html">
+	<header class="Mheader">
+		<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+		<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier" tap-event="click_search" >
+		<div class="cen">产品上线区</div>
+	</header>
+
+	<nav ui-type = "navlist" items-event = "gotoitem">
+		<ul class="ul clearfix">
+			<li status = '0' class="{{ if(!it.status || it.status==0){ }}cur{{ } }}">全部</li>
+			<li status = '6' class="{{ if(it.status == 6){ }}cur{{ } }}">销售中</li>
+			<li status = '10' class="{{ if(it.status == 10){ }}cur{{ } }}">暂下架</li>
+		</ul>
+	</nav>
+
+	<div class="Mlist btnMlist">
+		<ul>
+			{{ for (var i = 0, l = it.items.length; i < l; i++) { }}
+			<li tap-event = "view_details"  params = "{'id':'{{=it.items[i].id}}'}">
+				<dl>
+					<dt class="number">
+						<i class="{{if (i==0){ }}i_one{{ }else if(i==1){ }}i_two{{ }else if (i==2){ }}i_three{{ }else{ }}{{ } }}">{{=i+1}}</i>
+					</dt>
+					<dt class="product">
+					<p class="p1">{{=it.items[i].full_name}}</p>
+					<p class="p2">{{=it.items[i].add_time}}</p>
+					</dt>
+					<dt class="cursor">
+					<p class="p1"><i class="img_rt"></i>推荐人</p>
+					<p class="p2">{{=it.items[i].creater}}</p>
+					</dt>
+					<dt class="setting">
+						<span>{{ if(it.items[i].status==1){ }}未完成 {{ } else if(it.items[i].status==2){ }}待评分{{ }else if(it.items[i].status==3){ }}合同待上传{{ }else if(it.items[i].status==4){ }}合同待审核{{ }else if(it.items[i].status==5){ }}产品待审核{{ }else if(it.items[i].status==6){ }}销售中{{ }else if(it.items[i].status==7){ }}已过期{{ }else if(it.items[i].status==8){ }}被撤销{{ }else if(it.items[i].status==9){ }}被终止{{ }else if(it.items[i].status==10){ }}暂下架{{ }else if(it.items[i].status==11){ }}已下架{{ }else if(it.items[i].status==99){ }}预录{{ } }}</span>
+					</dt>
+				</dl>
+			</li>
+			{{ } }}
+		</ul>
+		<div class="more" tap-event="loadmore"><button>点击加载更多</button></div>
+	</div>
+</template>
+
+<template name="items" type="text/html">
+	{{ for (var i = 0, index = it.init_i , l = it.items.length; i < l; i++ , index++) { }}
+	<li tap-event = "view_details"  params = "{'id':'{{=it.items[i].id}}'}">
+		<dl>
+			<dt class="number">
+				<i class="{{if (index==0){ }}i_one{{ }else if(index==1){ }}i_two{{ }else if (index==2){ }}i_three{{ }else{ }}{{ } }}">{{=index+1}}</i>
+			</dt>
+			<dt class="product">
+			<p class="p1">{{=it.items[i].full_name}}</p>
+			<p class="p2">{{=it.items[i].add_time}}</p>
+			</dt>
+			<dt class="cursor">
+			<p class="p1"><i class="img_rt"></i>推荐人</p>
+			<p class="p2">{{=it.items[i].creater}}</p>
+			</dt>
+			<dt class="setting">
+				<span>{{ if(it.items[i].status==1){ }}未完成 {{ } else if(it.items[i].status==2){ }}待评分{{ }else if(it.items[i].status==3){ }}合同待上传{{ }else if(it.items[i].status==4){ }}合同待审核{{ }else if(it.items[i].status==5){ }}产品待审核{{ }else if(it.items[i].status==6){ }}销售中{{ }else if(it.items[i].status==7){ }}已过期{{ }else if(it.items[i].status==8){ }}被撤销{{ }else if(it.items[i].status==9){ }}被终止{{ }else if(it.items[i].status==10){ }}暂下架{{ }else if(it.items[i].status==11){ }}已下架{{ }else if(it.items[i].status==99){ }}预录{{ } }}</span>
+			</dt>
+		</dl>
+	</li>
+	{{ } }}
+</template>

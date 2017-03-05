@@ -1,0 +1,73 @@
+<div ui-type='button' tap-event='click_button'>这是message</div>
+<button onclick='alertClick()'>alert</button>
+<button onclick='confirmrejectClick()'>comfirm-reject</button>
+<button onclick='confirmpauseClick()'>comfirm-pause</button>
+<button onclick='confirmcancelClick()'>comfirm-cancel</button>
+<button onclick='confirmcontinuelick()'>comfirm-continue</button>
+<button onclick='confirmsubmitClick()'>comfirm-submit</button>
+<button onclick='promptClick()'>prompt</button>
+<button onclick='loadingShowClick()'>loadingshow</button>
+<button onclick='loadingHideClick()'>loadinghide</button>
+<button onclick='loadingShowClick1()'>loadingshow1</button>
+<button onclick='loadingHideClick1()'>loadinghide1</button>
+<input type=text class="m-numbertext numbertext-inputEl" data-options='{"minValue":0,"maxValue":100,"stepValue":10,"decimalPrecision":0,"allowDecimals":false,"displaySkip":true}' />
+
+<div id="loadingdiv" style="width:100%;height:200px;background:white;">this is loading div
+</div>
+<div id="loadingdiv1" style="width:100%;height:200px;background:white;">this is loading div1
+</div>
+<script type="text/javascript">
+	$('.m-numbertext').numbertext();
+	var dom=document.getElementById('loadingdiv');
+	var dom1=document.getElementById('loadingdiv1');
+	var alertClick=function(){
+		$M.Message.alert('提示','成功','info')
+	},
+	 confirmrejectClick=function(){
+		$M.Message.confirm('提示','确认操作吗','reject',function(result){
+			console.log(result);
+		})
+	},
+	confirmpauseClick=function(){
+		$M.Message.confirm('提示','确认操作吗','pause',function(result){
+			console.log(result);
+		})
+	},
+	confirmcancelClick=function(){
+		$M.Message.confirm('提示','确认操作吗','cancel',function(result){
+			console.log(result);
+		})
+	},
+	confirmcontinuelick=function(){
+		$M.Message.confirm('提示','确认操作吗','continue',function(result){
+			console.log(result);
+		})
+	},
+	confirmsubmitClick=function(){
+		$M.Message.confirm('提示','确认操作吗','submit',function(result){
+			console.log(result);
+		})
+	},
+	 promptClick=function(){
+		$M.Message.prompt('提示','输入信息',function(value){
+			console.log(value);
+		})
+	},
+	 loadingShowClick=function(){
+	 	
+		$M.Loading.show(dom)
+	},
+	 loadingHideClick=function(){
+	 	
+		$M.Loading.hide(dom,true)
+	},
+	loadingShowClick1=function(){
+	 	
+		$M.Loading.show(dom1,false)
+	},
+	 loadingHideClick1=function(){
+	 	
+		$M.Loading.hide(dom1)
+	}
+
+</script>

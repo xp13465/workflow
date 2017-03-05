@@ -1,0 +1,32 @@
+.numbertext-inputEl{
+    border: 0;
+    /*border-bottom: 1px solid black;*/
+}
+.numbertext-touchWrap{
+  position: relative;
+  width: 210px;
+  border-bottom: 1px solid black;
+}
+.numbertext-inputWrap{
+  width: 150px;
+}
+.numbertext-skipWrap{
+   position: absolute;
+   top:0;
+   left: 150px;
+}
+.numbertext-skipUp{
+  width: 30px;
+  height: 30px;
+  background: url('../../images/spinner-up.png');
+  position: absolute;
+  /*background-size: 30px 30px;*/
+}
+.numbertext-skipDown{
+  width: 30px;
+  height: 30px;
+  background: url('../../images/spinner-down.png');
+  position: absolute;
+  left: 30px;
+  /*background-size: 30px 30px;*/
+}

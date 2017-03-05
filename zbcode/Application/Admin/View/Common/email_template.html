@@ -1,0 +1,15 @@
+<div class="box">
+	<p>
+	尊敬的用户：<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;<b>{$data.realname}</b>,您好！<br/>
+		&nbsp;&nbsp;您在{$data.time|default=time()|date='Y-m-d H:i:s',###}提交找回密码请求，请点击下面的链接修改用户的密码:<br/>
+		&nbsp;&nbsp;{$data.act_url}<br/>
+		&nbsp;&nbsp;(如果您无法点击这个链接，请将此链接复制到浏览器地址栏后访问)<br/>
+		&nbsp;&nbsp;为了保证您帐号的安全性，该链接有效期为30分钟!请及时修改您的密码。<br/>
+		&nbsp;&nbsp;如果您误收到此电子邮件，则可能是其他用户在尝试帐号设置时的误操作，如果您并未发起该请求，则无需再进行任何操作，并可以放心地忽略此电子邮件。<br/>
+		&nbsp;&nbsp;若您担心帐号安全，建议您立即登录，进入个人管理中心，修改密码。<br/>
+		&nbsp;&nbsp;请勿直接回复本邮件。<br/>
+		&nbsp;&nbsp;感谢您使用<h3><?php echo C('SYSTEM_NAME');?>！</h3><br/>
+		&nbsp;&nbsp;此邮件为自动发送，请勿回复！<br/>
+	</p>
+</div>

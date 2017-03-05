@@ -1,0 +1,40 @@
+<header class="Mheader isShowSearch">
+	<img src="/Public/mobile/images/break.png" alt="" class="break" tap-event="backprvepage">
+	<img src="/Public/mobile/images/magnifier.png" alt="" class="magnifier">
+	<div class="cen">评分</div>
+	<div class="search">
+		<div class="g_text">
+			<input type="text">
+		</div>
+		<i class="ser_btn"></i>
+	</div>
+</header>
+<div class="tablelist">
+	{{ for(var k in it.scoreInfo) { }}
+	<dl>
+		<dt>
+			<span class="tit">{{=it.scoreInfo[k].group_name}}</span>
+			<span class="fr"></span>
+		</dt>
+		{{ for(var j in it.scoreInfo[k].fields) { }}
+		<dd>
+			{{=it.scoreInfo[k].fields[j].field_name}}
+			<span class="fr">{{=it.scoreInfo[k].fields[j].field_value}}</span>
+			{{if(j==it.scoreInfo[k].fields.length-1)  { }}
+			<input type=text class="m-numbertext numbertext-inputEl" data-options='{"minValue":0,"maxValue":100,"stepValue":10,"decimalPrecision":0,"allowDecimals":false,"displaySkip":true}' />
+			{{ } }}
+		</dd>
+		{{ } }}
+	</dl>
+	{{ } }}
+	<div class="dis_box">
+
+		<div><button class="btn_blur" tap-event = "submit_product" params = '{"id":"{{=it.baseInfo.base.id}}"}'>提交</button></div>
+		<div><button class="btn_gray" tap-event = "cancel_product" params = '{"id":"{{=it.baseInfo.base.id}}"}'>取消</button></div>
+
+
+	</div>
+</div>
+<script type="text/javascript">
+	$('.m-numbertext').numbertext();
+</script>
